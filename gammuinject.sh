@@ -12,3 +12,4 @@ subj="$2"
 body="$3"
 
 sudo gammu-smsd-inject TEXT +$to -text "$subj"
+
