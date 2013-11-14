@@ -1,4 +1,5 @@
 #!/bin/bash
+# zabbix gammu sms sender via gammu-smsd-inject
 
 usage(){
     echo "Usage: $0 [MSISDN] [message] <body>"
