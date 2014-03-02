@@ -1,0 +1,1559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>2.0</version>
+    <date>2014-03-02T22:06:23Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template CPQIDA-MIB</template>
+            <name>Template CPQIDA-MIB</name>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>CPQIDA-MIB</name>
+                </application>
+            </applications>
+            <items/>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>Array Controllers</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>CPQIDA-MIB::cpqDaCntlrIndex</snmp_oid>
+                    <key>cpqDaCntlrIndex</key>
+                    <delay>60</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <filter>:</filter>
+                    <lifetime>30</lifetime>
+                    <description/>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Array Controller #$1 Board Condition</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrBoardCondition.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrBoardCondition.[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>The condition of the device.  This value represents the&#13;
+condition of the controller and any associated array&#13;
+accelerators.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>CPQIDA-MIB cpqDaCntlrCondition</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 Board Status</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrBoardStatus.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrBoardStatus.[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>The following values are valid:&#13;
+&#13;
+other (1)&#13;
+Indicates that the instrument agent does not recognize the&#13;
+status of the controller.  You may need to upgrade the instrument&#13;
+agent.&#13;
+&#13;
+ok (2)&#13;
+The array controller is operating properly.&#13;
+&#13;
+generalFailure (3)&#13;
+The array controller is failed.&#13;
+&#13;
+cableProblem (4)&#13;
+The array controller has a cable problem.  Please check&#13;
+all cable connections to this controller.&#13;
+&#13;
+poweredOff (5)&#13;
+The array controller is powered off.  Please replace the&#13;
+controller and restore power to the slot.&#13;
+&#13;
+Enumerations:&#13;
+1 - other&#13;
+2 - ok&#13;
+3 - generalFailure&#13;
+4 - cableProblem&#13;
+5 - poweredOff</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>CPQIDA-MIB cpqDaCntlrBoardStatus</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 Condition</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrCondition.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrCondition.[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>The condition of the device.  This value represents the overall&#13;
+condition of this controller, and any associated logical drives,&#13;
+physical drives, and array accelerators.&#13;
+&#13;
+Enumerations:&#13;
+1 - other&#13;
+2 - ok&#13;
+3 - degraded&#13;
+4 - failed</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>CPQIDA-MIB cpqDaCntlrCondition</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 Current Role</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrCurrentRole.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrCurrentRole[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>For duplexed array controllers, this is the controllers current&#13;
+role.  The following values are valid:&#13;
+&#13;
+other (1)&#13;
+Indicates that the instrument agent does not recognize the&#13;
+role of the controller.  You may need to upgrade the instrument&#13;
+agent.&#13;
+&#13;
+notDuplexed (2)&#13;
+This array controller is not duplexed.&#13;
+&#13;
+active (3)&#13;
+This duplexed array controller is the active controller.&#13;
+&#13;
+backup (4)&#13;
+This duplexed array controller is the backup controller.&#13;
+&#13;
+Enumerations:&#13;
+1 - other&#13;
+2 - notDuplexed&#13;
+3 - active&#13;
+4 - backup</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>CPQIDA-MIB cpqDaCntlrCurrentRole</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 Daughter Board Type</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrDaughterBoardType.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrDaughterBoardType[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>The following values are valid:&#13;
+other (1)&#13;
+  Indicates that the agent does not recognize the daughter&#13;
+  board type.  You may need to upgrade the agent.&#13;
+notSupported (2)&#13;
+  Indicates that the daughter board type field is not supported&#13;
+  on this type of controller.&#13;
+notPresent (3)&#13;
+  Indicates that no daughter board is present.&#13;
+scsiBoardPresent (4)&#13;
+  Indicates that the SCSI daughter board is present.&#13;
+fibreBoardPresent (5)&#13;
+  Indicates that the Fibre daughter board is present.&#13;
+arrayExpansionModulePresent (6)&#13;
+  Indicates that an array Expansion Module is present.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>CPQIDA-MIB cpqDaCntlrDaughterBoardType</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 Drive Ownership</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrDriveOwnership.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrDriveOwnership.[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>For duplexed controllers, indicates to which controller slot&#13;
+the shared devices are associated.&#13;
+The following values are valid:&#13;
+other (1)&#13;
+  Indicates that the instrument agent does not recognize the&#13;
+  status of the controller.  You may need to upgrade the instrument&#13;
+  agent.&#13;
+owner (2)&#13;
+  All the logical, physical and spare drives are associated&#13;
+  with this controller.&#13;
+notOwner (3)&#13;
+  The logical, physical and spare drives are not associated&#13;
+  with this controller.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>CPQIDA-MIB cpqDaCntlrDriveOwnership</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 Drive Write Cache State</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrDriveWriteCacheState.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrDriveWriteCacheState[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>This is the controller's drive write cache setting.  The&#13;
+following values are valid:&#13;
+other (1)&#13;
+  Indicates that the instrument agent does not recognize the&#13;
+  value.  You may need to upgrade the instrument agent.&#13;
+disabled (2)&#13;
+  The controller will disable drive write cache for all drives.&#13;
+enabled (3)&#13;
+  The controller will enable drive write cache for all drives.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>CPQIDA-MIB cpqDaCntlrDriveWriteCacheState</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 Expand Priority</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrExpandPriority.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrExpandPriority[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>This is the controller's expand priority.  The following values&#13;
+are valid:&#13;
+other (1)&#13;
+  Indicates that the instrument agent does not recognize the&#13;
+  expand priority of the controller.  You may need to upgrade&#13;
+  the instrument agent.&#13;
+low (2)&#13;
+  The expand priority is low.&#13;
+medium (3)&#13;
+  The expand priority is medium.&#13;
+high (4)&#13;
+  The expand priority is high.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>CPQIDA-MIB cpqDaCntlrRebuildPriority</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 Firmware Revision</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrFWRev.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrFWRev[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Array Controller Firmware Revision.&#13;
+&#13;
+The firmware revision of the drive array controller. This&#13;
+value can be used to help identify a particular revision&#13;
+of the controller.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 Hardware Location</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrHwLocation.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrHwLocation[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>A text description of the hardware location of the controller.&#13;
+A NULL string indicates that the hardware location could not&#13;
+be determined or is irrelevant.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 Model</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrModel.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrModel[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>Array Controller Model.&#13;
+The type of controller card.  The valid types are:&#13;
+Other  (1)&#13;
+  You may need to upgrade your driver software and\or instrument&#13;
+  agent(s).  You have a drive array controller in the system&#13;
+  that the instrument agent does not recognize.&#13;
+IDA (2)&#13;
+  Compaq 32-Bit Intelligent Drive Array Controller.&#13;
+  The physical drives are located inside the system.&#13;
+IDA Expansion (3)&#13;
+  Compaq 32-Bit Intelligent Drive Array Expansion Controller.&#13;
+  The physical drives are located in the Array Expansion System&#13;
+  that is connected to the system by a cable.&#13;
+IDA - 2 (4)&#13;
+  Compaq Intelligent Drive Array Controller-2 (IDA-2).&#13;
+  The physical drives are located inside the system.&#13;
+SMART (5)&#13;
+  Compaq SMART Array Controller.  The physical drives can be&#13;
+  located inside the system or outside the system in a ProLiant&#13;
+  Storage System that is connected to the system by a cable.&#13;
+SMART - 2/E (6)&#13;
+  Compaq SMART-2/E Array Controller.  The physical drives can be&#13;
+  located inside the system or outside the system in a ProLiant&#13;
+  Storage System that is connected to the system by a cable.&#13;
+SMART - 2/P (7)&#13;
+  Compaq SMART-2/P Array Controller.  The physical drives can be&#13;
+  located inside the system or outside the system in a ProLiant&#13;
+  Storage System that is connected to the system by a cable.&#13;
+SMART - 2SL (8)&#13;
+  Compaq SMART-2SL Array Controller.  The physical drives can be&#13;
+  located inside the system or outside the system in a ProLiant&#13;
+  Storage System that is connected to the system by a cable.&#13;
+Smart - 3100ES (9)&#13;
+  Compaq Smart Array 3100ES Controller.  The physical drives are&#13;
+  located inside the system.&#13;
+Smart - 3200 (10)&#13;
+  Compaq Smart Array 3200 Controller.  The physical drives can&#13;
+  be located inside the system or outside the system in a&#13;
+  ProLiant Storage System that is connected to the system by a&#13;
+  cable.&#13;
+SMART - 2DH (11)&#13;
+  Compaq SMART-2DH Array Controller.  The physical drives can be&#13;
+  located inside the system or outside the system in a ProLiant&#13;
+  Storage System that is connected to the system by a cable.&#13;
+Smart - 221 (12)&#13;
+  Compaq Smart Array 221 Controller.  The physical drives can be&#13;
+  located inside the system or outside the system in a ProLiant&#13;
+  Storage System that is connected to the system by a cable.&#13;
+Smart Array 4250ES (13)&#13;
+  Compaq Smart Array 4250ES Controller.  The physical drives are&#13;
+  located inside the system.&#13;
+Smart Array 4200 (14)&#13;
+  Compaq Smart Array 4200 Controller.  The physical drives can&#13;
+  be located inside the system or outside the system in a&#13;
+  ProLiant Storage System that is connected to the system by a&#13;
+  cable.&#13;
+Integrated Smart Array (15)&#13;
+  Compaq Integrated Smart Array Controller.  The physical drives&#13;
+  can be located inside the system or outside the system in a&#13;
+  ProLiant Storage System that is connected to the system by a&#13;
+  cable.&#13;
+Smart Array 431 (16)&#13;
+  Compaq Smart Array 431 Controller.  The physical drives can be&#13;
+  located inside the system or outside the system in a ProLiant&#13;
+  Storage System that is connected to the system by a cable.&#13;
+Smart Array 5300 (17)&#13;
+  HP Smart Array 5300 Controller.&#13;
+RAID LC2 Controller (18)&#13;
+  Compaq RAID LC2 Controller.&#13;
+Smart Array 5i (19)&#13;
+  HP Smart Array 5i Controller.&#13;
+Smart Array 532 (20)&#13;
+  Compaq Smart Array 532 Controller.&#13;
+Smart Array 5312 (21)&#13;
+  Compaq Smart Array 5312 Controller.&#13;
+Smart Array 641 (22)&#13;
+  HP Smart Array 641 Controller.&#13;
+Smart Array 642 (23)&#13;
+  HP Smart Array 642 Controller.&#13;
+Smart Array 6400 (24)&#13;
+  HP Smart Array 6400 Controller.&#13;
+Smart Array 6400 EM (25)&#13;
+  HP Smart Array 6400 EM Controller.&#13;
+Smart Array 6i (26)&#13;
+  HP Smart Array 6i Controller.&#13;
+Generic Array (27)&#13;
+  Array Controller.&#13;
+Reserved (28)&#13;
+Smart Array P600 (29)&#13;
+  HP Smart Array P600 Controller.&#13;
+Smart Array P400 (30)&#13;
+  HP Smart Array P400 Controller.&#13;
+Smart Array E200 (31)&#13;
+  HP Smart Array E200 Controller.&#13;
+Smart Array E200i (32)&#13;
+  HP Smart Array E200i Controller.&#13;
+Smart Array P400i (33)&#13;
+  HP Smart Array P400i Controller.&#13;
+Smart Array P800 (34)&#13;
+  HP Smart Array P800 Controller.&#13;
+Smart Array E500 (35)&#13;
+  HP Smart Array E500 Controller.&#13;
+Smart Array P700m (36)&#13;
+  HP Smart Array P700m Controller.&#13;
+Smart Array P212 (37)&#13;
+  HP Smart Array P212 Controller.&#13;
+Smart Array P410 (38)&#13;
+  HP Smart Array P410 Controller.&#13;
+Smart Array P410i (39)&#13;
+  HP Smart Array P410i Controller.&#13;
+Smart Array P411 (40)&#13;
+  HP Smart Array P411 Controller.&#13;
+Smart Array B110i SATA RAID (41)&#13;
+  HP Smart Array B110i SATA RAID Controller.&#13;
+  &#13;
+Smart Array P712m (42)&#13;
+  HP Smart Array P712m Controller.&#13;
+  &#13;
+Smart Array P711m (43)&#13;
+  HP Smart Array P711m Controller.&#13;
+  &#13;
+Smart Array P812 (44)&#13;
+  HP Smart Array P812 Controller.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>CPQIDA-MIB cpqDaCntlrModel</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 Number of buses</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrNumberOfBuses.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrNumberOfBuses[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>This value is the number of SCSI buses on the controller.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 Number of External Ports</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrNumberOfExternalPorts.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrNumberOfExternalPorts[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>This value is the number of external SAS connectoros on the&#13;
+controller.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 Number of Internal Ports</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrNumberOfInternalPorts.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrNumberOfInternalPorts[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>This value is the number of internal SAS connectoros on the&#13;
+controller.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 Partner Board Condition</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrPartnerBoardCondition.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrPartnerBoardCondition.[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>The condition of the device.  This value represents the&#13;
+condition of the controller and any associated array&#13;
+accelerators.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>CPQIDA-MIB cpqDaCntlrCondition</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 Partner Board Status</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrPartnerBoardStatus.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrPartnerBoardStatus.[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>The following values are valid:&#13;
+other (1)&#13;
+  Indicates that the instrument agent does not recognize the&#13;
+  status of the controller.  You may need to upgrade the instrument&#13;
+  agent.&#13;
+ok (2)&#13;
+  The partner array controller is operating properly.&#13;
+generalFailure (3)&#13;
+  The partner array controller is the failed.&#13;
+cableProblem (4)&#13;
+  The partner array controller has a cable problem.  Please check&#13;
+  all cable connections to this controller.&#13;
+poweredOff (5)&#13;
+  The array controller is powered off.  Please replace the&#13;
+  controller and restore power to the slot.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>CPQIDA-MIB cpqDaCntlrBoardStatus</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 Partner Slot</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrPartnerSlot.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrPartnerSlot[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>For duplexed array controllers, this is the slot number of the&#13;
+partner controller.  For non-duplexed controllers, the value should&#13;
+be -1.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 Physical Drive Blink Time Count</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrBlinkTime.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrBlinkTime[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>The controller blink time variable allows the drive tray LEDs&#13;
+of all physical drives attached to this controller to blink.&#13;
+This value indicates the amount of time, in tenths of a second,&#13;
+that the physical drive LEDs will continue to blink.  A value&#13;
+of zero indicates the drive LEDs are not blinking.  If the&#13;
+value cannot be determined or no drive on this controller is in&#13;
+a hot plug tray, 4,294,967,295 is returned.&#13;
+To blink the drive LEDs on all physical drives attached to this&#13;
+controller, set this value to the time to blink in tenths of&#13;
+seconds.&#13;
+To stop the drive LEDs from blinking, set this value to 0.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 Product Revision</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrProductRev.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrProductRev[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>The Product Revision of the drive array controller.  This value&#13;
+can be used to further identify a particular revision of the&#13;
+controller model.  This will be one character ASCII value that&#13;
+is zero terminated.  If the controller model or the firmware&#13;
+does not support the product revision, the agents will return&#13;
+a NULL string.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 RAID ADG Enabler Module Status</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrAccessModuleStatus.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrAccessModuleStatus[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>The following values are valid:&#13;
+other (1)&#13;
+  Indicates that the agent does not recognize the RAID ADG&#13;
+  Enabler Module status.  You may need to upgrade the agent.&#13;
+notSupported (2)&#13;
+  Indicates that the RAID ADG Enabler Module is not supported on&#13;
+  this type of controller.&#13;
+notPresent (3)&#13;
+  Indicates that the RAID ADG Enabler Module is not present or&#13;
+  is not accessible.&#13;
+badSignature (4)&#13;
+  Indicates that the RAID ADG Enabler Module is present, but has&#13;
+  an incorrect signature.&#13;
+badChecksum (5)&#13;
+  Indicates that the RAID ADG Enabler Module is present, but the&#13;
+  checksum failed.&#13;
+fullyFunctional (6)&#13;
+  Indicates that the RAID ADG Enabler Module is present and&#13;
+  fully functional.&#13;
+upgradeFirmware (7)&#13;
+  Indicates that the RAID ADG Enabler Module is present, but a&#13;
+  firmware upgrade is required to make it fully functional.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>CPQIDA-MIB cpqDaCntlrAccessModuleStatus</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 Rebuild Priority</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrRebuildPriority.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrRebuildPriority[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>This is the controller's rebuild priority.  The following values&#13;
+are valid:&#13;
+other (1)&#13;
+  Indicates that the instrument agent does not recognize the&#13;
+  rebuild priority of the controller.  You may need to upgrade&#13;
+  the instrument agent.&#13;
+low (2)&#13;
+  The rebuild priority is low.&#13;
+medium (3)&#13;
+  The rebuild priority is medium.&#13;
+high (4)&#13;
+  The rebuild priority is high.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>CPQIDA-MIB cpqDaCntlrRebuildPriority</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 Redundancy Error</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrRedundancyError.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrRedundancyError.[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>The following values are valid:&#13;
+other (1)&#13;
+  Indicates that the instrument agent does not recognize the&#13;
+  redundancy error of the controller.  You may need to upgrade&#13;
+  the instrument agent.&#13;
+noFailure (2)&#13;
+  No failures have been detected.&#13;
+noRedundantController (3)&#13;
+  No redundant controller is installed.&#13;
+differentHardware (4)&#13;
+  The other controller indicates a different hardware model.&#13;
+noLink (5)&#13;
+  An inter-controller link to the other controller could not be&#13;
+  established.&#13;
+differentFirmware (6)&#13;
+  The other controller indicates a different firmware version.&#13;
+differentCache (7)&#13;
+  The other controller indicates a different cache size.&#13;
+otherCacheFailure (8)&#13;
+  The other controller indicates a cache failure.&#13;
+noDrives (9)&#13;
+  This controller cannot see any attached drives, but the other&#13;
+  controller can.&#13;
+otherNoDrives (10)&#13;
+  This controller can see the attached drives, but the other&#13;
+  controller cannot.&#13;
+unsupportedDrives (11)&#13;
+  One or more attached drives has been determined to be incapable&#13;
+  of properly supporting redundant controller operation.&#13;
+expandInProgress (12)&#13;
+  Expand operation in progress.  Redundant operation not&#13;
+  supported until expand operation is complete.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>CPQIDA-MIB cpqDaCntlrRedundancyError</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 Redundancy Type</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrRedundancyType.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrRedundancyType.[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>The following values are valid:&#13;
+other (1)&#13;
+  Indicates that the instrument agent does not recognize the&#13;
+  redundancy type of the controller.  You may need to upgrade&#13;
+  the instrument agent.&#13;
+notRedundant (2)&#13;
+  The array controller is not in a redundant configuration.&#13;
+driverDuplexing (3)&#13;
+  The array controller is using a controller duplexing algorithm&#13;
+  implemented exclusively in the operating system driver.&#13;
+fwActiveStandby (4)&#13;
+  The array controller is using an active/standby algorithm&#13;
+  implemented in the controller firmware and the operating system&#13;
+  driver.&#13;
+fwPrimarySecondary (5)&#13;
+  The array controller is using a primary/secondary algorithm&#13;
+  implemented in the controller firmware and the operating system&#13;
+  driver.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>CPQIDA-MIB cpqDaCntlrRedundancyType</name>
+                            </valuemap>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 Serial Number</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrSerialNumber.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrSerialNumber[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>The serial number of the array controller.  This field will&#13;
+be a null (size 0) string if the controller does not support&#13;
+serial number.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 Slot</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrSlot.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrSlot.[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>This identifies the physical slot where the array controller&#13;
+resides in the system.  For example, if this value is three,&#13;
+the array controller is located in slot three of your computer.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 Standard Interface Status</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrStndIntr.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrStndIntr.[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>The Standard Interface is how DOS communicates with a drive.&#13;
+The following values are valid for Standard Interface:&#13;
+Other (1)&#13;
+  The device driver may not be loaded for this controller.&#13;
+  The instrument agent could not read the information from the&#13;
+  device.  Please load the device driver.&#13;
+Primary (2)&#13;
+  The Standard Interface is using the primary address for&#13;
+  communication.  DOS can access this drive and use this drive&#13;
+  as the primary boot device if it has been configured for this&#13;
+  purpose.&#13;
+Secondary (3)&#13;
+  The Standard Interface is using the secondary address for&#13;
+  communication.  DOS can access these drives, but cannot boot&#13;
+  from them.&#13;
+Disabled (4)&#13;
+  The Standard Interface is not enabled for communication.&#13;
+  DOS will not be able to access these drives.&#13;
+Unavailable (5)&#13;
+  This controller does not support a Standard Interface.&#13;
+  DOS cannot access these drives.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>CPQIDA-MIB cpqDaCntlrStndIntr</name>
+                            </valuemap>
+                        </item_prototype>
+                    </item_prototypes>
+                    <trigger_prototypes/>
+                    <graph_prototypes/>
+                    <host_prototypes/>
+                </discovery_rule>
+            </discovery_rules>
+            <macros/>
+            <templates/>
+            <screens/>
+        </template>
+    </templates>
+</zabbix_export>
