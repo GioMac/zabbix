@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2014-03-02T22:06:23Z</date>
+    <date>2014-03-23T08:56:15Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -21,8 +21,178 @@
                     <name>CPQIDA-MIB</name>
                 </application>
             </applications>
-            <items/>
+            <items>
+                <item>
+                    <name>CPQIDA-MIB Major Revision</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <multiplier>0</multiplier>
+                    <snmp_oid>CPQIDA-MIB::cpqDaMibRevMajor.0</snmp_oid>
+                    <key>cpqDaMibRevMajor.0</key>
+                    <delay>30</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <description>A change in the major revision level represents a major change&#13;
+in the architecture of the MIB.  A change in the major revision&#13;
+level may indicate a significant change in the information&#13;
+supported and/or the meaning of the supported information,&#13;
+correct interpretation of data may require a MIB document with&#13;
+the same major revision level.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>CPQIDA-MIB</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>CPQIDA-MIB Minor Revision</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <multiplier>0</multiplier>
+                    <snmp_oid>CPQIDA-MIB::cpqDaMibRevMinor.0</snmp_oid>
+                    <key>cpqDaMibRevMinor.0</key>
+                    <delay>30</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <description>A change in the minor revision level may represent some minor&#13;
+additional support, no changes to any pre-existing information&#13;
+has occurred.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>CPQIDA-MIB</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>CPQIDA-MIB overall status</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <multiplier>0</multiplier>
+                    <snmp_oid>CPQIDA-MIB::cpqDaMibCondition.0</snmp_oid>
+                    <key>cpqDaMibCondition.0</key>
+                    <delay>30</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <description>The overall condition (status) of the system represented by&#13;
+this MIB.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>CPQIDA-MIB</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>CPQIDA-MIB cpqDaCntlrCondition</name>
+                    </valuemap>
+                </item>
+            </items>
             <discovery_rules>
+                <discovery_rule>
+                    <name>Array Accelerator Board</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>CPQIDA-MIB::cpqDaAccelCntlrIndex</snmp_oid>
+                    <key>cpqDaAccelCntlrIndex</key>
+                    <delay>60</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <filter>:</filter>
+                    <lifetime>30</lifetime>
+                    <description/>
+                    <item_prototypes/>
+                    <trigger_prototypes/>
+                    <graph_prototypes/>
+                    <host_prototypes/>
+                </discovery_rule>
                 <discovery_rule>
                     <name>Array Controllers</name>
                     <type>4</type>
@@ -1546,6 +1716,371 @@ Unavailable (5)&#13;
                             </valuemap>
                         </item_prototype>
                     </item_prototypes>
+                    <trigger_prototypes/>
+                    <graph_prototypes/>
+                    <host_prototypes/>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Drive Array Controller Performance Monitor</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>CPQIDA-MIB::cpqDaCntlrPerfCntlrIndex</snmp_oid>
+                    <key>cpqDaCntlrPerfCntlrIndex</key>
+                    <delay>60</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <filter>:</filter>
+                    <lifetime>30</lifetime>
+                    <description/>
+                    <item_prototypes/>
+                    <trigger_prototypes/>
+                    <graph_prototypes/>
+                    <host_prototypes/>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Drive Array Logical Drive</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>CPQIDA-MIB::cpqDaLogDrvCntlrIndex</snmp_oid>
+                    <key>cpqDaLogDrvCntlrIndex</key>
+                    <delay>60</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <filter>:</filter>
+                    <lifetime>30</lifetime>
+                    <description/>
+                    <item_prototypes/>
+                    <trigger_prototypes/>
+                    <graph_prototypes/>
+                    <host_prototypes/>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Drive Array Logical Drive Performance Monitor</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>CPQIDA-MIB::cpqDaLogDrvPerfCntlrIndex</snmp_oid>
+                    <key>cpqDaLogDrvPerfCntlrIndex</key>
+                    <delay>60</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <filter>:</filter>
+                    <lifetime>30</lifetime>
+                    <description/>
+                    <item_prototypes/>
+                    <trigger_prototypes/>
+                    <graph_prototypes/>
+                    <host_prototypes/>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Drive Array Physical Drive</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>CPQIDA-MIB::cpqDaPhyDrvBay</snmp_oid>
+                    <key>cpqDaPhyDrvBay</key>
+                    <delay>60</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <filter>:</filter>
+                    <lifetime>30</lifetime>
+                    <description/>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Physical Drive $1 $2 $3 {#SNMPVALUE} Status</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>CPQIDA-MIB::cpqDaPhyDrvStatus.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaPhyDrvStatus.[{#SNMPVALUE}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>This shows the status of the physical drive.&#13;
+The following values are valid for the physical drive status:&#13;
+&#13;
+&#13;
+Other (1)&#13;
+  Indicates that the instrument agent does not recognize&#13;
+  the drive.  You may need to upgrade your instrument agent&#13;
+  and/or driver software.&#13;
+Ok (2)&#13;
+  Indicates the drive is functioning properly.&#13;
+Failed (3)&#13;
+  Indicates that the drive is no longer operating and&#13;
+  should be replaced.&#13;
+Predictive Failure(4)&#13;
+  Indicates that the drive has a predictive failure error and&#13;
+  should be replaced.&#13;
+Erasing(5)&#13;
+  Indicates that the drive is being erased.&#13;
+Erase Done(6)&#13;
+  Indicates that the drive has been erased and is now in an&#13;
+  offline state.&#13;
+Erase Queued(7)&#13;
+  Indicates that an erase operation is currently queued for&#13;
+  the drive.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>CPQIDA-MIB cpqDaPhyDrvStatus</name>
+                            </valuemap>
+                        </item_prototype>
+                    </item_prototypes>
+                    <trigger_prototypes/>
+                    <graph_prototypes/>
+                    <host_prototypes/>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Drive Array Physical Drive Threshold</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>CPQIDA-MIB::cpqDaPhyDrvThrCntlrIndex</snmp_oid>
+                    <key>cpqDaPhyDrvThrCntlrIndex</key>
+                    <delay>60</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <filter>:</filter>
+                    <lifetime>30</lifetime>
+                    <description/>
+                    <item_prototypes/>
+                    <trigger_prototypes/>
+                    <graph_prototypes/>
+                    <host_prototypes/>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Drive Array Spare</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>CPQIDA-MIB::cpqDaSpareTable</snmp_oid>
+                    <key>cpqDaSpareTable</key>
+                    <delay>60</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <filter>:</filter>
+                    <lifetime>30</lifetime>
+                    <description/>
+                    <item_prototypes/>
+                    <trigger_prototypes/>
+                    <graph_prototypes/>
+                    <host_prototypes/>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Drive Array Tape Counters</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>CPQIDA-MIB::cpqDaTapeCountersCntlrIndex</snmp_oid>
+                    <key>cpqDaTapeCountersCntlrIndex</key>
+                    <delay>60</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <filter>:</filter>
+                    <lifetime>30</lifetime>
+                    <description/>
+                    <item_prototypes/>
+                    <trigger_prototypes/>
+                    <graph_prototypes/>
+                    <host_prototypes/>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Drive Array Tape Drive</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>CPQIDA-MIB::cpqDaTapeDrvCntlrIndex</snmp_oid>
+                    <key>cpqDaTapeDrvCntlrIndex</key>
+                    <delay>60</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <filter>:</filter>
+                    <lifetime>30</lifetime>
+                    <description/>
+                    <item_prototypes/>
+                    <trigger_prototypes/>
+                    <graph_prototypes/>
+                    <host_prototypes/>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Drive Array Tape Library</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>CPQIDA-MIB::cpqDaTapeLibraryCntlrIndex</snmp_oid>
+                    <key>cpqDaTapeLibraryCntlrIndex</key>
+                    <delay>60</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <filter>:</filter>
+                    <lifetime>30</lifetime>
+                    <description/>
+                    <item_prototypes/>
                     <trigger_prototypes/>
                     <graph_prototypes/>
                     <host_prototypes/>

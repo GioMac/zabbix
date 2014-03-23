@@ -1,0 +1,133 @@
+CPQIDA-MIB cpqDaCntlrAccessModuleStatus
+1 = other
+2 = notSupported
+3 = notPresent
+4 = badSignature
+5 = badChecksum
+6 = fullyFunctional
+7 = upgradeFirmware
+
+CPQIDA-MIB cpqDaCntlrBoardStatus
+1 = other
+2 = ok
+3 = generalFailure
+4 = cableProblem
+5 = poweredOff
+
+CPQIDA-MIB cpqDaCntlrCondition
+1 = other
+2 = ok
+3 = degraded
+4 = failed
+
+CPQIDA-MIB cpqDaCntlrCurrentRole
+1 = other
+2 = notDuplexed
+3 = active
+4 = backup
+
+CPQIDA-MIB cpqDaCntlrDaughterBoardType
+1 = other
+2 = notSupported
+3 = notPresent
+4 = scsiBoardPresent
+5 = fibreBoardPresent
+6 = arrayExpansionModulePresent
+
+CPQIDA-MIB cpqDaCntlrDriveOwnership
+1 = other
+2 = owner
+3 = notOwner
+
+CPQIDA-MIB cpqDaCntlrDriveWriteCacheState
+1 = other
+2 = disabled
+3 = enabled
+
+CPQIDA-MIB cpqDaCntlrModel
+1 = other
+2 = ida
+3 = ida-expansion
+4 = ida-2
+5 = smart
+6 = smart-2e
+7 = smart-2p
+8 = smart-2sl
+9 = smart-3100es
+10 = smart-3200
+11 = smart-2dh
+12 = smart-221
+13 = sa-4250es
+14 = sa-4200
+15 = sa-integrated
+16 = sa-431
+17 = sa-5300
+18 = raidLc2
+19 = sa-5i
+20 = sa-532
+21 = sa-5312
+22 = sa-641
+23 = sa-642
+24 = sa-6400
+25 = sa-6400em
+26 = sa-6i
+27 = sa-generic
+29 = sa-p600
+30 = sa-e400
+31 = sa-e200
+32 = sa-e200i
+33 = sa-p400i
+34 = sa-p800
+35 = sa-e500
+36 = sa-p700m
+37 = sa-p212
+38 = sa-p410
+39 = sa-p410i
+40 = sa-p411
+41 = sa-b110i
+42 = sa-p712m
+43 = sa-p711m
+44 = sa-p812
+
+CPQIDA-MIB cpqDaCntlrRebuildPriority
+1 = other
+2 = low
+3 = medium
+4 = high
+
+CPQIDA-MIB cpqDaCntlrRedundancyError
+1 = other
+2 = noFailure
+3 = noRedundantController
+4 = differentHardware
+5 = noLink
+6 = differentFirmware
+7 = differentCache
+8 = otherCacheFailure
+9 = noDrives
+10 = otherNoDrives
+11 = unsupportedDrives
+12 = expandInProgress
+
+CPQIDA-MIB cpqDaCntlrRedundancyType
+1 = other
+2 = notRedundant
+3 = driverDuplexing
+4 = fwActiveStandby
+5 = fwPrimarySecondary
+
+CPQIDA-MIB cpqDaCntlrStndIntr
+1 = Other
+2 = Primary
+3 = Secondary
+4 = Disabled
+5 = Unavailable
+
+CPQIDA-MIB cpqDaPhyDrvStatus
+1 = Other
+2 = Ok
+3 = Failed
+4 = Predictive Failure
+5 = Erasing
+6 = Erase Done
+7 = Erase Queued
