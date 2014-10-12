@@ -1,3 +1,7 @@
+upsAutoRestart
+1 = on
+2 = off
+
 UPS-MIB upsBatteryStatus
 1 = unknown
 2 = batteryNormal
