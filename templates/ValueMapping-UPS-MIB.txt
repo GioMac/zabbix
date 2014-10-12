@@ -1,0 +1,31 @@
+UPS-MIB upsBatteryStatus
+1 = unknown
+2 = batteryNormal
+3 = batteryLow
+4 = batteryDepleted
+
+UPS-MIB upsConfigAudibleStatus
+1 = disabled
+2 = enabled
+3 = muted
+
+UPS-MIB upsOutputSource
+1 = other
+2 = none
+3 = normal
+4 = bypass
+5 = battery
+6 = booster
+7 = reducer
+
+UPS-MIB upsShutdownType
+1 = output
+2 = system
+
+UPS-MIB upsTestResultsSummary
+1 = donePass
+2 = doneWarning
+3 = doneError
+4 = aborted
+5 = inProgress
+6 = noTestsInitiated
