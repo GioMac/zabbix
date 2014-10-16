@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2014-10-12T18:39:08Z</date>
+    <date>2014-10-16T11:10:46Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -9,15 +9,252 @@
     </groups>
     <templates>
         <template>
-            <template>Template UPS-MIB</template>
-            <name>Template UPS-MIB</name>
+            <template>GTS Template UPS-MIB</template>
+            <name>GTS Template UPS-MIB</name>
             <groups>
                 <group>
                     <name>Templates</name>
                 </group>
             </groups>
             <applications/>
-            <items/>
+            <items>
+                <item>
+                    <name>ICMP loss</name>
+                    <type>3</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>icmppingloss[,3,,,]</key>
+                    <delay>60</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>%</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications/>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>ICMP ping</name>
+                    <type>3</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>icmpping</key>
+                    <delay>60</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications/>
+                    <valuemap>
+                        <name>Service state</name>
+                    </valuemap>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>ICMP response time</name>
+                    <type>3</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>icmppingsec</key>
+                    <delay>60</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>s</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications/>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>UPS SNMP coldStart trap</name>
+                    <type>17</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>snmptrap[coldStart]</key>
+                    <delay>0</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>2</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications/>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>UPS SNMP fallback trap</name>
+                    <type>17</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>snmptrap.fallback</key>
+                    <delay>0</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>2</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications/>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>UPS SNMP on Battery trap</name>
+                    <type>17</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>snmptrap[&quot;UPS-MIB::upsTrapOnBattery&quot;]</key>
+                    <delay>0</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>2</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications/>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+            </items>
             <discovery_rules>
                 <discovery_rule>
                     <name>UPS Alarms Present</name>
@@ -25,7 +262,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsAlarmsPresent</snmp_oid>
                     <key>upsAlarmsPresent</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -45,7 +282,7 @@
                     <privatekey/>
                     <port>{$SNMP_PORT}</port>
                     <filter>:</filter>
-                    <lifetime>30</lifetime>
+                    <lifetime>14</lifetime>
                     <description/>
                     <item_prototypes>
                         <item_prototype>
@@ -88,7 +325,17 @@
                             <logtimefmt/>
                         </item_prototype>
                     </item_prototypes>
-                    <trigger_prototypes/>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{GTS Template UPS-MIB:upsAlarmsPresent[{#SNMPINDEX}].last(,0)}&gt;0</expression>
+                            <name>UPS Alarm Present</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                    </trigger_prototypes>
                     <graph_prototypes/>
                     <host_prototypes/>
                 </discovery_rule>
@@ -98,7 +345,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsBatteryCurrent</snmp_oid>
                     <key>upsBatteryCurrent</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -118,7 +365,7 @@
                     <privatekey/>
                     <port>{$SNMP_PORT}</port>
                     <filter>:</filter>
-                    <lifetime>30</lifetime>
+                    <lifetime>14</lifetime>
                     <description/>
                     <item_prototypes>
                         <item_prototype>
@@ -162,7 +409,40 @@
                         </item_prototype>
                     </item_prototypes>
                     <trigger_prototypes/>
-                    <graph_prototypes/>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>UPS Battery {#SNMPVALUE} Current</name>
+                            <width>900</width>
+                            <height>200</height>
+                            <yaxismin>0.0000</yaxismin>
+                            <yaxismax>100.0000</yaxismax>
+                            <show_work_period>0</show_work_period>
+                            <show_triggers>0</show_triggers>
+                            <type>0</type>
+                            <show_legend>1</show_legend>
+                            <show_3d>0</show_3d>
+                            <percent_left>0.0000</percent_left>
+                            <percent_right>0.0000</percent_right>
+                            <ymin_type_1>1</ymin_type_1>
+                            <ymax_type_1>0</ymax_type_1>
+                            <ymin_item_1>0</ymin_item_1>
+                            <ymax_item_1>0</ymax_item_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>0</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>C80000</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>GTS Template UPS-MIB</host>
+                                        <key>upsBatteryCurrent[{#SNMPINDEX}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
                     <host_prototypes/>
                 </discovery_rule>
                 <discovery_rule>
@@ -171,7 +451,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsEstimatedChargeRemaining</snmp_oid>
                     <key>upsEstimatedChargeRemaining</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -234,8 +514,51 @@
                             <logtimefmt/>
                         </item_prototype>
                     </item_prototypes>
-                    <trigger_prototypes/>
-                    <graph_prototypes/>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{GTS Template UPS-MIB:upsEstimatedChargeRemaining[{#SNMPINDEX}].last()}&lt;15</expression>
+                            <name>UPS Battery Low</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>3</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>UPS Battery {#SNMPINDEX} Estimated Charge Remaining</name>
+                            <width>900</width>
+                            <height>200</height>
+                            <yaxismin>0.0000</yaxismin>
+                            <yaxismax>100.0000</yaxismax>
+                            <show_work_period>0</show_work_period>
+                            <show_triggers>0</show_triggers>
+                            <type>0</type>
+                            <show_legend>1</show_legend>
+                            <show_3d>0</show_3d>
+                            <percent_left>0.0000</percent_left>
+                            <percent_right>0.0000</percent_right>
+                            <ymin_type_1>1</ymin_type_1>
+                            <ymax_type_1>1</ymax_type_1>
+                            <ymin_item_1>0</ymin_item_1>
+                            <ymax_item_1>0</ymax_item_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>0</sortorder>
+                                    <drawtype>1</drawtype>
+                                    <color>00DD00</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>GTS Template UPS-MIB</host>
+                                        <key>upsEstimatedChargeRemaining[{#SNMPINDEX}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
                     <host_prototypes/>
                 </discovery_rule>
                 <discovery_rule>
@@ -244,7 +567,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsEstimatedMinutesRemaining</snmp_oid>
                     <key>upsEstimatedMinutesRemaining</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -307,7 +630,17 @@
                             <logtimefmt/>
                         </item_prototype>
                     </item_prototypes>
-                    <trigger_prototypes/>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{GTS Template UPS-MIB:upsEstimatedMinutesRemaining[{#SNMPINDEX}].last()}&lt;10 &amp; {GTS Template UPS-MIB:upsEstimatedMinutesRemaining[{#SNMPINDEX}].last()}#0</expression>
+                            <name>UPS Battery Low</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>3</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                    </trigger_prototypes>
                     <graph_prototypes/>
                     <host_prototypes/>
                 </discovery_rule>
@@ -317,7 +650,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsSecondsOnBattery</snmp_oid>
                     <key>upsSecondsOnBattery</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -390,7 +723,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsBatteryStatus</snmp_oid>
                     <key>upsBatteryStatus</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -455,7 +788,17 @@
                             <logtimefmt/>
                         </item_prototype>
                     </item_prototypes>
-                    <trigger_prototypes/>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{GTS Template UPS-MIB:upsBatteryStatus[{#SNMPINDEX}].last()}=4</expression>
+                            <name>UPS Battery Depleted</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                    </trigger_prototypes>
                     <graph_prototypes/>
                     <host_prototypes/>
                 </discovery_rule>
@@ -465,7 +808,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsBatteryTemperature</snmp_oid>
                     <key>upsBatteryTemperature</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -528,8 +871,51 @@
                             <logtimefmt/>
                         </item_prototype>
                     </item_prototypes>
-                    <trigger_prototypes/>
-                    <graph_prototypes/>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{GTS Template UPS-MIB:upsBatteryTemperature[{#SNMPINDEX}].last()}&gt;40</expression>
+                            <name>UPS Battery Temperature Too High</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>UPS Battery {#SNMPINDEX} Temperature</name>
+                            <width>900</width>
+                            <height>200</height>
+                            <yaxismin>0.0000</yaxismin>
+                            <yaxismax>55.0000</yaxismax>
+                            <show_work_period>0</show_work_period>
+                            <show_triggers>0</show_triggers>
+                            <type>0</type>
+                            <show_legend>1</show_legend>
+                            <show_3d>0</show_3d>
+                            <percent_left>0.0000</percent_left>
+                            <percent_right>0.0000</percent_right>
+                            <ymin_type_1>1</ymin_type_1>
+                            <ymax_type_1>1</ymax_type_1>
+                            <ymin_item_1>0</ymin_item_1>
+                            <ymax_item_1>0</ymax_item_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>0</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>C80000</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>GTS Template UPS-MIB</host>
+                                        <key>upsBatteryTemperature[{#SNMPINDEX}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
                     <host_prototypes/>
                 </discovery_rule>
                 <discovery_rule>
@@ -538,7 +924,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsBatteryVoltage</snmp_oid>
                     <key>upsBatteryVoltage</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -602,7 +988,40 @@
                         </item_prototype>
                     </item_prototypes>
                     <trigger_prototypes/>
-                    <graph_prototypes/>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>UPS Battery {#SNMPINDEX} Voltage</name>
+                            <width>900</width>
+                            <height>200</height>
+                            <yaxismin>15.0000</yaxismin>
+                            <yaxismax>100.0000</yaxismax>
+                            <show_work_period>0</show_work_period>
+                            <show_triggers>0</show_triggers>
+                            <type>0</type>
+                            <show_legend>1</show_legend>
+                            <show_3d>0</show_3d>
+                            <percent_left>0.0000</percent_left>
+                            <percent_right>0.0000</percent_right>
+                            <ymin_type_1>1</ymin_type_1>
+                            <ymax_type_1>0</ymax_type_1>
+                            <ymin_item_1>0</ymin_item_1>
+                            <ymax_item_1>0</ymax_item_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>0</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>0000BB</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>GTS Template UPS-MIB</host>
+                                        <key>upsBatteryVoltage[{#SNMPINDEX}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
                     <host_prototypes/>
                 </discovery_rule>
                 <discovery_rule>
@@ -611,7 +1030,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsBypassCurrent</snmp_oid>
                     <key>upsBypassCurrent</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -684,7 +1103,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsBypassFrequency</snmp_oid>
                     <key>upsBypassFrequency</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -757,7 +1176,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsBypassNumLines</snmp_oid>
                     <key>upsBypassNumLines</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -820,7 +1239,17 @@
                             <logtimefmt/>
                         </item_prototype>
                     </item_prototypes>
-                    <trigger_prototypes/>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{GTS Template UPS-MIB:upsBypassNumLines[{#SNMPINDEX}].last()}#0</expression>
+                            <name>UPS has bypass lines</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                    </trigger_prototypes>
                     <graph_prototypes/>
                     <host_prototypes/>
                 </discovery_rule>
@@ -830,7 +1259,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsBypassPower</snmp_oid>
                     <key>upsBypassPower</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -903,7 +1332,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsBypassVoltage</snmp_oid>
                     <key>upsBypassVoltage</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -939,7 +1368,7 @@
                             <status>0</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
-                            <units>RMS Volts</units>
+                            <units>V RMS</units>
                             <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
@@ -976,7 +1405,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsConfigAudibleStatus</snmp_oid>
                     <key>upsConfigAudibleStatus</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -1041,7 +1470,17 @@
                             <logtimefmt/>
                         </item_prototype>
                     </item_prototypes>
-                    <trigger_prototypes/>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{GTS Template UPS-MIB:upsConfigAudibleStatus[{#SNMPINDEX}].last()}=1</expression>
+                            <name>UPS Audible Status is Disabled</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>3</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                    </trigger_prototypes>
                     <graph_prototypes/>
                     <host_prototypes/>
                 </discovery_rule>
@@ -1051,7 +1490,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsConfigHighVoltageTransferPoint</snmp_oid>
                     <key>upsConfigHighVoltageTransferPoint</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -1124,7 +1563,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsConfigInputFreq</snmp_oid>
                     <key>upsConfigInputFreq</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -1197,7 +1636,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsConfigInputVoltage</snmp_oid>
                     <key>upsConfigInputVoltage</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -1270,7 +1709,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsConfigLowBattTime</snmp_oid>
                     <key>upsConfigLowBattTime</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -1333,7 +1772,26 @@
                             <logtimefmt/>
                         </item_prototype>
                     </item_prototypes>
-                    <trigger_prototypes/>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{GTS Template UPS-MIB:upsConfigLowBattTime[{#SNMPINDEX}].last()}&gt;30</expression>
+                            <name>UPS Config Low Battery Time is too high</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{GTS Template UPS-MIB:upsConfigLowBattTime[{#SNMPINDEX}].last()}&lt;10</expression>
+                            <name>UPS Config Low Battery Time is too low</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                    </trigger_prototypes>
                     <graph_prototypes/>
                     <host_prototypes/>
                 </discovery_rule>
@@ -1343,7 +1801,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsConfigLowVoltageTransferPoint</snmp_oid>
                     <key>upsConfigLowVoltageTransferPoint</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -1416,7 +1874,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsConfigOutputFreq</snmp_oid>
                     <key>upsConfigOutputFreq</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -1489,7 +1947,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsConfigOutputPower</snmp_oid>
                     <key>upsConfigOutputPower</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -1562,7 +2020,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsConfigOutputVA</snmp_oid>
                     <key>upsConfigOutputVA</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -1635,7 +2093,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsConfigOutputVoltage</snmp_oid>
                     <key>upsConfigOutputVoltage</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -1708,7 +2166,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsAutoRestart</snmp_oid>
                     <key>upsAutoRestart</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -1773,7 +2231,17 @@
                             <logtimefmt/>
                         </item_prototype>
                     </item_prototypes>
-                    <trigger_prototypes/>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{GTS Template UPS-MIB:upsAutoRestart[{#SNMPINDEX}].last()}=1</expression>
+                            <name>UPS Control Auto Restart is Off</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                    </trigger_prototypes>
                     <graph_prototypes/>
                     <host_prototypes/>
                 </discovery_rule>
@@ -1783,7 +2251,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsRebootWithDuration</snmp_oid>
                     <key>upsRebootWithDuration</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -1856,7 +2324,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsShutdownAfterDelay</snmp_oid>
                     <key>upsShutdownAfterDelay</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -1929,7 +2397,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsShutdownType</snmp_oid>
                     <key>upsShutdownType</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -2004,7 +2472,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsStartupAfterDelay</snmp_oid>
                     <key>upsStartupAfterDelay</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -2077,7 +2545,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsIdentAgentSoftwareVersion</snmp_oid>
                     <key>upsIdentAgentSoftwareVersion</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -2140,7 +2608,17 @@
                             <logtimefmt/>
                         </item_prototype>
                     </item_prototypes>
-                    <trigger_prototypes/>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{GTS Template UPS-MIB:upsIdentAgentSoftwareVersion[{#SNMPINDEX}].str(2.48.CP504.WEST)}#0 &amp; {GTS Template UPS-MIB:upsIdentAgentSoftwareVersion[{#SNMPINDEX}].str(CP504.WEST)}=0</expression>
+                            <name>UPS Netagent Version is not recommended one</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                    </trigger_prototypes>
                     <graph_prototypes/>
                     <host_prototypes/>
                 </discovery_rule>
@@ -2150,7 +2628,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsIdentAttachedDevices</snmp_oid>
                     <key>upsIdentAttachedDevices</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -2223,7 +2701,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsIdentManufacturer</snmp_oid>
                     <key>upsIdentManufacturer</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -2296,7 +2774,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsIdentModel</snmp_oid>
                     <key>upsIdentModel</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -2369,7 +2847,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsIdentName</snmp_oid>
                     <key>upsIdentName</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -2442,7 +2920,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsIdentUPSSoftwareVersion</snmp_oid>
                     <key>upsIdentUPSSoftwareVersion</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -2515,7 +2993,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsInputCurrent</snmp_oid>
                     <key>upsInputCurrent</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -2588,7 +3066,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsInputFrequency</snmp_oid>
                     <key>upsInputFrequency</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -2651,8 +3129,60 @@
                             <logtimefmt/>
                         </item_prototype>
                     </item_prototypes>
-                    <trigger_prototypes/>
-                    <graph_prototypes/>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{GTS Template UPS-MIB:upsInputFrequency[{#SNMPINDEX}].last()}&gt;53</expression>
+                            <name>UPS Input Frequency is too high</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>({GTS Template UPS-MIB:upsInputFrequency[{#SNMPINDEX}].last()}&gt;0 &amp; {GTS Template UPS-MIB:upsInputFrequency[{#SNMPINDEX}].last()}&lt;47)</expression>
+                            <name>UPS Input Frequency is too low</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>UPS Input {#SNMPINDEX} Frequency</name>
+                            <width>900</width>
+                            <height>200</height>
+                            <yaxismin>40.0000</yaxismin>
+                            <yaxismax>60.0000</yaxismax>
+                            <show_work_period>0</show_work_period>
+                            <show_triggers>0</show_triggers>
+                            <type>0</type>
+                            <show_legend>1</show_legend>
+                            <show_3d>0</show_3d>
+                            <percent_left>0.0000</percent_left>
+                            <percent_right>0.0000</percent_right>
+                            <ymin_type_1>1</ymin_type_1>
+                            <ymax_type_1>1</ymax_type_1>
+                            <ymin_item_1>0</ymin_item_1>
+                            <ymax_item_1>0</ymax_item_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>0</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>C80000</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>GTS Template UPS-MIB</host>
+                                        <key>upsInputFrequency[{#SNMPINDEX}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
                     <host_prototypes/>
                 </discovery_rule>
                 <discovery_rule>
@@ -2661,7 +3191,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsInputLineBads</snmp_oid>
                     <key>upsInputLineBads</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -2724,7 +3254,17 @@
                             <logtimefmt/>
                         </item_prototype>
                     </item_prototypes>
-                    <trigger_prototypes/>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{GTS Template UPS-MIB:upsInputLineBads[{#SNMPINDEX}].last()}#0</expression>
+                            <name>Bad UPS Input Line</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                    </trigger_prototypes>
                     <graph_prototypes/>
                     <host_prototypes/>
                 </discovery_rule>
@@ -2734,7 +3274,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsInputNumLines</snmp_oid>
                     <key>upsInputNumLines</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -2807,7 +3347,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsInputTruePower</snmp_oid>
                     <key>upsInputTruePower</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -2880,7 +3420,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsInputVoltage</snmp_oid>
                     <key>upsInputVoltage</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -2916,7 +3456,7 @@
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
-                            <units>RMS Volts</units>
+                            <units>V RMS</units>
                             <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
@@ -2943,8 +3483,60 @@
                             <logtimefmt/>
                         </item_prototype>
                     </item_prototypes>
-                    <trigger_prototypes/>
-                    <graph_prototypes/>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{GTS Template UPS-MIB:upsInputVoltage[{#SNMPINDEX}].last()}&gt;249</expression>
+                            <name>UPS Input Voltage too High</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{GTS Template UPS-MIB:upsInputVoltage[{#SNMPINDEX}].last()}&lt;190 &amp; {GTS Template UPS-MIB:upsInputVoltage[{#SNMPINDEX}].last()}&gt;0</expression>
+                            <name>UPS Input Voltage too Low</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>UPS Input {#SNMPINDEX} Voltage</name>
+                            <width>900</width>
+                            <height>200</height>
+                            <yaxismin>180.0000</yaxismin>
+                            <yaxismax>280.0000</yaxismax>
+                            <show_work_period>0</show_work_period>
+                            <show_triggers>0</show_triggers>
+                            <type>0</type>
+                            <show_legend>1</show_legend>
+                            <show_3d>0</show_3d>
+                            <percent_left>0.0000</percent_left>
+                            <percent_right>0.0000</percent_right>
+                            <ymin_type_1>1</ymin_type_1>
+                            <ymax_type_1>1</ymax_type_1>
+                            <ymin_item_1>0</ymin_item_1>
+                            <ymax_item_1>0</ymax_item_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>0</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>C80000</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>GTS Template UPS-MIB</host>
+                                        <key>upsInputVoltage[{#SNMPINDEX}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
                     <host_prototypes/>
                 </discovery_rule>
                 <discovery_rule>
@@ -2953,7 +3545,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsOutputCurrent</snmp_oid>
                     <key>upsOutputCurrent</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -3026,7 +3618,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsOutputFrequency</snmp_oid>
                     <key>upsOutputFrequency</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -3089,8 +3681,60 @@
                             <logtimefmt/>
                         </item_prototype>
                     </item_prototypes>
-                    <trigger_prototypes/>
-                    <graph_prototypes/>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{GTS Template UPS-MIB:upsOutputFrequency[{#SNMPINDEX}].last()}&gt;53</expression>
+                            <name>UPS Output Frequency is too high</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>({GTS Template UPS-MIB:upsOutputFrequency[{#SNMPINDEX}].last()}&gt;0 &amp; {GTS Template UPS-MIB:upsOutputFrequency[{#SNMPINDEX}].last()}&lt;47)</expression>
+                            <name>UPS Output Frequency is too low</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>UPS Output {#SNMPINDEX} Frequency</name>
+                            <width>900</width>
+                            <height>200</height>
+                            <yaxismin>40.0000</yaxismin>
+                            <yaxismax>60.0000</yaxismax>
+                            <show_work_period>0</show_work_period>
+                            <show_triggers>0</show_triggers>
+                            <type>0</type>
+                            <show_legend>1</show_legend>
+                            <show_3d>0</show_3d>
+                            <percent_left>0.0000</percent_left>
+                            <percent_right>0.0000</percent_right>
+                            <ymin_type_1>1</ymin_type_1>
+                            <ymax_type_1>1</ymax_type_1>
+                            <ymin_item_1>0</ymin_item_1>
+                            <ymax_item_1>0</ymax_item_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>0</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>0000CC</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>GTS Template UPS-MIB</host>
+                                        <key>upsOutputFrequency[{#SNMPINDEX}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
                     <host_prototypes/>
                 </discovery_rule>
                 <discovery_rule>
@@ -3099,7 +3743,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsOutputNumLines</snmp_oid>
                     <key>upsOutputNumLines</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -3172,7 +3816,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsOutputPercentLoad</snmp_oid>
                     <key>upsOutputPercentLoad</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -3235,8 +3879,51 @@
                             <logtimefmt/>
                         </item_prototype>
                     </item_prototypes>
-                    <trigger_prototypes/>
-                    <graph_prototypes/>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{GTS Template UPS-MIB:upsOutputPercentLoad[{#SNMPINDEX}].last()}&gt;90</expression>
+                            <name>UPS Output Load too High</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>UPS Output {#SNMPINDEX} Load</name>
+                            <width>900</width>
+                            <height>200</height>
+                            <yaxismin>0.0000</yaxismin>
+                            <yaxismax>150.0000</yaxismax>
+                            <show_work_period>0</show_work_period>
+                            <show_triggers>0</show_triggers>
+                            <type>0</type>
+                            <show_legend>1</show_legend>
+                            <show_3d>0</show_3d>
+                            <percent_left>0.0000</percent_left>
+                            <percent_right>0.0000</percent_right>
+                            <ymin_type_1>1</ymin_type_1>
+                            <ymax_type_1>1</ymax_type_1>
+                            <ymin_item_1>0</ymin_item_1>
+                            <ymax_item_1>0</ymax_item_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>0</sortorder>
+                                    <drawtype>1</drawtype>
+                                    <color>C80000</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>GTS Template UPS-MIB</host>
+                                        <key>upsOutputPercentLoad[{#SNMPINDEX}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
                     <host_prototypes/>
                 </discovery_rule>
                 <discovery_rule>
@@ -3245,7 +3932,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsOutputPower</snmp_oid>
                     <key>upsOutputPower</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -3318,7 +4005,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsOutputSource</snmp_oid>
                     <key>upsOutputSource</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -3383,7 +4070,44 @@
                             <logtimefmt/>
                         </item_prototype>
                     </item_prototypes>
-                    <trigger_prototypes/>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{GTS Template UPS-MIB:upsOutputSource[{#SNMPINDEX}].last()}=5</expression>
+                            <name>UPS output source is on battery</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>3</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{GTS Template UPS-MIB:upsOutputSource[{#SNMPINDEX}].last()}=4</expression>
+                            <name>UPS output source is on bypass</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{GTS Template UPS-MIB:upsOutputSource[{#SNMPINDEX}].last()}#3 &amp; {GTS Template UPS-MIB:upsOutputSource[{#SNMPINDEX}].last()}#4 &amp; {GTS Template UPS-MIB:upsOutputSource[{#SNMPINDEX}].last()}#5</expression>
+                            <name>UPS output source unknown</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{GTS Template UPS-MIB:upsOutputSource[{#SNMPINDEX}].nodata(3m)}=1</expression>
+                            <name>UPS SNMP data not received for 3 minutes</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                    </trigger_prototypes>
                     <graph_prototypes/>
                     <host_prototypes/>
                 </discovery_rule>
@@ -3393,7 +4117,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsOutputVoltage</snmp_oid>
                     <key>upsOutputVoltage</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -3429,7 +4153,7 @@
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
-                            <units>RMS Volts</units>
+                            <units>V RMS</units>
                             <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
@@ -3456,8 +4180,60 @@
                             <logtimefmt/>
                         </item_prototype>
                     </item_prototypes>
-                    <trigger_prototypes/>
-                    <graph_prototypes/>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{GTS Template UPS-MIB:upsOutputVoltage[{#SNMPINDEX}].last()}&gt;230</expression>
+                            <name>UPS Output Voltage is abnormally high</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{GTS Template UPS-MIB:upsOutputVoltage[{#SNMPINDEX}].last()}&lt;210 &amp; {GTS Template UPS-MIB:upsOutputVoltage[{#SNMPINDEX}].last()}&gt;0</expression>
+                            <name>UPS Output Voltage is abnormally low</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>UPS Output {#SNMPINDEX} Voltage</name>
+                            <width>900</width>
+                            <height>200</height>
+                            <yaxismin>180.0000</yaxismin>
+                            <yaxismax>280.0000</yaxismax>
+                            <show_work_period>0</show_work_period>
+                            <show_triggers>0</show_triggers>
+                            <type>0</type>
+                            <show_legend>1</show_legend>
+                            <show_3d>0</show_3d>
+                            <percent_left>0.0000</percent_left>
+                            <percent_right>0.0000</percent_right>
+                            <ymin_type_1>1</ymin_type_1>
+                            <ymax_type_1>1</ymax_type_1>
+                            <ymin_item_1>0</ymin_item_1>
+                            <ymax_item_1>0</ymax_item_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>0</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>C80000</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>GTS Template UPS-MIB</host>
+                                        <key>upsOutputVoltage[{#SNMPINDEX}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
                     <host_prototypes/>
                 </discovery_rule>
                 <discovery_rule>
@@ -3466,7 +4242,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsTestElapsedTime</snmp_oid>
                     <key>upsTestElapsedTime</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -3539,7 +4315,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsTestResultsDetail</snmp_oid>
                     <key>upsTestResultsDetail</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -3612,7 +4388,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsTestResultsSummary</snmp_oid>
                     <key>upsTestResultsSummary</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -3677,7 +4453,17 @@
                             <logtimefmt/>
                         </item_prototype>
                     </item_prototypes>
-                    <trigger_prototypes/>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{GTS Template UPS-MIB:upsTestResultsSummary[{#SNMPINDEX}].last()}#1 &amp; {GTS Template UPS-MIB:upsTestResultsSummary[{#SNMPINDEX}].last()}#5</expression>
+                            <name>UPS Test status is abnormal</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                    </trigger_prototypes>
                     <graph_prototypes/>
                     <host_prototypes/>
                 </discovery_rule>
@@ -3687,7 +4473,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsTestSpinLock</snmp_oid>
                     <key>upsTestSpinLock</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -3760,7 +4546,7 @@
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>UPS-MIB::upsTestStartTime</snmp_oid>
                     <key>upsTestStartTime</key>
-                    <delay>30</delay>
+                    <delay>300</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -3833,4 +4619,122 @@
             <screens/>
         </template>
     </templates>
+    <triggers>
+        <trigger>
+            <expression>{GTS Template UPS-MIB:icmppingloss[,3,,,].min(5m)}&gt;20</expression>
+            <name>Ping loss is too high on {HOST.NAME}</name>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>{HOST.NAME} is unavailable by ICMP</name>
+                    <expression>{GTS Template UPS-MIB:icmpping.max(#3)}=0</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{GTS Template UPS-MIB:icmppingsec.avg(5m)}&gt;0.15</expression>
+            <name>Response time is too high on {HOST.NAME}</name>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description/>
+            <type>0</type>
+            <dependencies>
+                <dependency>
+                    <name>{HOST.NAME} is unavailable by ICMP</name>
+                    <expression>{GTS Template UPS-MIB:icmpping.max(#3)}=0</expression>
+                </dependency>
+            </dependencies>
+        </trigger>
+        <trigger>
+            <expression>{GTS Template UPS-MIB:snmptrap[&quot;UPS-MIB::upsTrapOnBattery&quot;].nodata(5m)}=0</expression>
+            <name>UPS on Battery</name>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{GTS Template UPS-MIB:icmpping.max(#3)}=0</expression>
+            <name>{HOST.NAME} is unavailable by ICMP</name>
+            <url/>
+            <status>0</status>
+            <priority>3</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+    </triggers>
+    <graphs>
+        <graph>
+            <name>ICMP ping loss</name>
+            <width>900</width>
+            <height>200</height>
+            <yaxismin>0.0000</yaxismin>
+            <yaxismax>100.0000</yaxismax>
+            <show_work_period>0</show_work_period>
+            <show_triggers>0</show_triggers>
+            <type>0</type>
+            <show_legend>1</show_legend>
+            <show_3d>0</show_3d>
+            <percent_left>0.0000</percent_left>
+            <percent_right>0.0000</percent_right>
+            <ymin_type_1>1</ymin_type_1>
+            <ymax_type_1>0</ymax_type_1>
+            <ymin_item_1>0</ymin_item_1>
+            <ymax_item_1>0</ymax_item_1>
+            <graph_items>
+                <graph_item>
+                    <sortorder>0</sortorder>
+                    <drawtype>1</drawtype>
+                    <color>BB0000</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>GTS Template UPS-MIB</host>
+                        <key>icmppingloss[,3,,,]</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>ICMP response time</name>
+            <width>900</width>
+            <height>200</height>
+            <yaxismin>0.0000</yaxismin>
+            <yaxismax>100.0000</yaxismax>
+            <show_work_period>0</show_work_period>
+            <show_triggers>0</show_triggers>
+            <type>0</type>
+            <show_legend>1</show_legend>
+            <show_3d>0</show_3d>
+            <percent_left>0.0000</percent_left>
+            <percent_right>0.0000</percent_right>
+            <ymin_type_1>1</ymin_type_1>
+            <ymax_type_1>0</ymax_type_1>
+            <ymin_item_1>0</ymin_item_1>
+            <ymax_item_1>0</ymax_item_1>
+            <graph_items>
+                <graph_item>
+                    <sortorder>0</sortorder>
+                    <drawtype>1</drawtype>
+                    <color>00CC00</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>GTS Template UPS-MIB</host>
+                        <key>icmppingsec</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+    </graphs>
 </zabbix_export>
