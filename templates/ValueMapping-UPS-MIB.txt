@@ -1,4 +1,4 @@
-upsAutoRestart
+UPS-MIB upsAutoRestart
 1 = on
 2 = off
 
