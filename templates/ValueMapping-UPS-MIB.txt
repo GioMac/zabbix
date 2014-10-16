@@ -1,19 +1,19 @@
-UPS-MIB upsAutoRestart
+upsAutoRestart
 1 = on
 2 = off
 
-UPS-MIB upsBatteryStatus
+upsBatteryStatus
 1 = unknown
 2 = batteryNormal
 3 = batteryLow
 4 = batteryDepleted
 
-UPS-MIB upsConfigAudibleStatus
+upsConfigAudibleStatus
 1 = disabled
 2 = enabled
 3 = muted
 
-UPS-MIB upsOutputSource
+upsOutputSource
 1 = other
 2 = none
 3 = normal
@@ -22,11 +22,11 @@ UPS-MIB upsOutputSource
 6 = booster
 7 = reducer
 
-UPS-MIB upsShutdownType
+upsShutdownType
 1 = output
 2 = system
 
-UPS-MIB upsTestResultsSummary
+upsTestResultsSummary
 1 = donePass
 2 = doneWarning
 3 = doneError
