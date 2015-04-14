@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2015-04-11T21:03:08Z</date>
+    <date>2015-04-14T15:05:37Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -20,7 +20,7 @@
             <applications/>
             <items>
                 <item>
-                    <name>net.netfilter.nf_conntrack_count</name>
+                    <name>netfilter nf_conntrack_count</name>
                     <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
@@ -59,7 +59,7 @@
                     <logtimefmt/>
                 </item>
                 <item>
-                    <name>net.netfilter.nf_conntrack_max</name>
+                    <name>netfilter nf_conntrack_max</name>
                     <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
