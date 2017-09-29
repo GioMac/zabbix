@@ -1,0 +1,1 @@
+Role allows zabbix user to run lvs commands and then makes thin pool config
