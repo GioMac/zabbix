@@ -1,0 +1,6 @@
+##
+## zabbix user privilege specifications
+##
+zabbix ALL=NOPASSWD: LVM_LVS
+zabbix ALL=NOPASSWD: LVM_VGS
+zabbix ALL=NOPASSWD: LVM_PVS

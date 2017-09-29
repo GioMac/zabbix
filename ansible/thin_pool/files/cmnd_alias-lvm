@@ -1,0 +1,6 @@
+##
+## Linux Logical Volume Management (LVM) command alias specifications
+##
+Cmnd_Alias LVM_LVS = /sbin/lvs *
+Cmnd_Alias LVM_VGS = /sbin/vgs *
+Cmnd_Alias LVM_PVS = /sbin/pvs *

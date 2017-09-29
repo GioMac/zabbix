@@ -1,0 +1,5 @@
+---
+#This playbook configures thin pool monitoring
+- hosts: "{{ target }}"
+  roles:
+    - name: thin_pool

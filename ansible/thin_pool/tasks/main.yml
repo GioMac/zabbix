@@ -1,0 +1,22 @@
+---
+#LVM
+- name: put thinpool.conf
+  copy:
+    src: thinpool.conf
+    dest: /etc/zabbix/zabbix_agentd.d/thinpool.conf
+
+- name: put cmnd_alias-lvm
+  copy:
+    src: cmnd_alias-lvm
+    dest: /etc/sudoers.d/cmnd_alias-lvm
+
+- name: put user-zabbix_lvm
+  copy:
+    src: user-zabbix_lvm
+    dest: /etc/sudoers.d/user-zabbix_lvm
+
+- name: restart zabbix-agent daemon
+  service:
+    name: zabbix-agent
+    enabled: yes
+    state: restarted
