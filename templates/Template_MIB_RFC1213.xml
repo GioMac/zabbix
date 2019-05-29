@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.2</version>
-    <date>2019-05-29T21:12:43Z</date>
+    <date>2019-05-29T21:21:28Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -2609,12 +2609,28 @@ value of sysUpTime.</description>
             <httptests/>
             <macros>
                 <macro>
+                    <macro>{$TCP_RST_PCT_CRIT_HIGH}</macro>
+                    <value>15</value>
+                </macro>
+                <macro>
+                    <macro>{$TCP_RST_PCT_CRIT_LOW}</macro>
+                    <value>10</value>
+                </macro>
+                <macro>
                     <macro>{$TCP_RST_PCT_WARN_HIGH}</macro>
                     <value>8</value>
                 </macro>
                 <macro>
                     <macro>{$TCP_RST_PCT_WARN_LOW}</macro>
                     <value>7</value>
+                </macro>
+                <macro>
+                    <macro>{$TCP_RST_SUM_CRIT_HIGH}</macro>
+                    <value>1400</value>
+                </macro>
+                <macro>
+                    <macro>{$TCP_RST_SUM_CRIT_LOW}</macro>
+                    <value>1200</value>
                 </macro>
                 <macro>
                     <macro>{$TCP_RST_SUM_WARN_HIGH}</macro>
@@ -2647,18 +2663,16 @@ value of sysUpTime.</description>
             <dependencies>
                 <dependency>
                     <name>TCP - RST sent % critical</name>
-                    <expression>( {Template MIB RFC1213:tcpOutRstsPercent.avg(5m)}&gt;30 and {Template MIB RFC1213:tcpOutRsts.sum(1m)}&gt;1400) or &#13;
-({Template MIB RFC1213:tcpOutRstsPercent.avg(5m)}&gt;15 and {Template MIB RFC1213:tcpOutRsts.sum(1m)}&gt;1400)</expression>
-                    <recovery_expression>{Template MIB RFC1213:tcpOutRstsPercent.avg(5m)}&lt;10 or {Template MIB RFC1213:tcpOutRsts.sum(1m)}&lt;1200</recovery_expression>
+                    <expression>{Template MIB RFC1213:tcpOutRstsPercent.avg(5m)}&gt;{$TCP_RST_PCT_CRIT_HIGH} and {Template MIB RFC1213:tcpOutRsts.sum(1m)}&gt;{$TCP_RST_SUM_CRIT_HIGH}</expression>
+                    <recovery_expression>{Template MIB RFC1213:tcpOutRstsPercent.avg(5m)}&lt;{$TCP_RST_PCT_CRIT_LOW} or {Template MIB RFC1213:tcpOutRsts.sum(1m)}&lt;{$TCP_RST_SUM_CRIT_LOW}</recovery_expression>
                 </dependency>
             </dependencies>
             <tags/>
         </trigger>
         <trigger>
-            <expression>( {Template MIB RFC1213:tcpOutRstsPercent.avg(5m)}&gt;30 and {Template MIB RFC1213:tcpOutRsts.sum(1m)}&gt;1400) or &#13;
-({Template MIB RFC1213:tcpOutRstsPercent.avg(5m)}&gt;15 and {Template MIB RFC1213:tcpOutRsts.sum(1m)}&gt;1400)</expression>
+            <expression>{Template MIB RFC1213:tcpOutRstsPercent.avg(5m)}&gt;{$TCP_RST_PCT_CRIT_HIGH} and {Template MIB RFC1213:tcpOutRsts.sum(1m)}&gt;{$TCP_RST_SUM_CRIT_HIGH}</expression>
             <recovery_mode>1</recovery_mode>
-            <recovery_expression>{Template MIB RFC1213:tcpOutRstsPercent.avg(5m)}&lt;10 or {Template MIB RFC1213:tcpOutRsts.sum(1m)}&lt;1200</recovery_expression>
+            <recovery_expression>{Template MIB RFC1213:tcpOutRstsPercent.avg(5m)}&lt;{$TCP_RST_PCT_CRIT_LOW} or {Template MIB RFC1213:tcpOutRsts.sum(1m)}&lt;{$TCP_RST_SUM_CRIT_LOW}</recovery_expression>
             <name>TCP - RST sent % critical</name>
             <correlation_mode>0</correlation_mode>
             <correlation_tag/>
