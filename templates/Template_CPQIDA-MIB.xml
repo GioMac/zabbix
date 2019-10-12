@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
-    <version>2.0</version>
-    <date>2014-03-23T08:56:15Z</date>
+    <version>4.2</version>
+    <date>2019-10-12T14:26:31Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -9,8 +9,9 @@
     </groups>
     <templates>
         <template>
-            <template>Template CPQIDA-MIB</template>
-            <name>Template CPQIDA-MIB</name>
+            <template>Template CPQIDA-MIB - alpha</template>
+            <name>Template CPQIDA-MIB - alpha</name>
+            <description/>
             <groups>
                 <group>
                     <name>Templates</name>
@@ -23,20 +24,18 @@
             </applications>
             <items>
                 <item>
-                    <name>CPQIDA-MIB Major Revision</name>
+                    <name>CPQIDA-MIB overall status</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <multiplier>0</multiplier>
-                    <snmp_oid>CPQIDA-MIB::cpqDaMibRevMajor.0</snmp_oid>
-                    <key>cpqDaMibRevMajor.0</key>
+                    <snmp_oid>CPQIDA-MIB::cpqDaMibCondition.0</snmp_oid>
+                    <key>cpqDaMibCondition.0</key>
                     <delay>30</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>7d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units/>
-                    <delta>0</delta>
                     <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -44,11 +43,70 @@
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port>{$SNMP_PORT}</port>
+                    <description>The overall condition (status) of the system represented by&#13;
+this MIB.</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>CPQIDA-MIB</name>
+                        </application>
+                    </applications>
+                    <valuemap>
+                        <name>CPQIDA-MIB cpqDaCntlrCondition</name>
+                    </valuemap>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <timeout>3s</timeout>
+                    <url/>
+                    <query_fields/>
+                    <posts/>
+                    <status_codes>200</status_codes>
+                    <follow_redirects>1</follow_redirects>
+                    <post_type>0</post_type>
+                    <http_proxy/>
+                    <headers/>
+                    <retrieve_mode>0</retrieve_mode>
+                    <request_method>1</request_method>
+                    <output_format>0</output_format>
+                    <allow_traps>0</allow_traps>
+                    <ssl_cert_file/>
+                    <ssl_key_file/>
+                    <ssl_key_password/>
+                    <verify_peer>0</verify_peer>
+                    <verify_host>0</verify_host>
+                    <master_item/>
+                </item>
+                <item>
+                    <name>CPQIDA-MIB Major Revision</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>CPQIDA-MIB::cpqDaMibRevMajor.0</snmp_oid>
+                    <key>cpqDaMibRevMajor.0</key>
+                    <delay>30</delay>
+                    <history>7d</history>
+                    <trends>365d</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -68,22 +126,42 @@ the same major revision level.</description>
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <timeout>3s</timeout>
+                    <url/>
+                    <query_fields/>
+                    <posts/>
+                    <status_codes>200</status_codes>
+                    <follow_redirects>1</follow_redirects>
+                    <post_type>0</post_type>
+                    <http_proxy/>
+                    <headers/>
+                    <retrieve_mode>0</retrieve_mode>
+                    <request_method>1</request_method>
+                    <output_format>0</output_format>
+                    <allow_traps>0</allow_traps>
+                    <ssl_cert_file/>
+                    <ssl_key_file/>
+                    <ssl_key_password/>
+                    <verify_peer>0</verify_peer>
+                    <verify_host>0</verify_host>
+                    <master_item/>
                 </item>
                 <item>
                     <name>CPQIDA-MIB Minor Revision</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <multiplier>0</multiplier>
                     <snmp_oid>CPQIDA-MIB::cpqDaMibRevMinor.0</snmp_oid>
                     <key>cpqDaMibRevMinor.0</key>
                     <delay>30</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>7d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units/>
-                    <delta>0</delta>
                     <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -91,11 +169,8 @@ the same major revision level.</description>
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -112,51 +187,28 @@ has occurred.</description>
                         </application>
                     </applications>
                     <valuemap/>
-                </item>
-                <item>
-                    <name>CPQIDA-MIB overall status</name>
-                    <type>4</type>
-                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <multiplier>0</multiplier>
-                    <snmp_oid>CPQIDA-MIB::cpqDaMibCondition.0</snmp_oid>
-                    <key>cpqDaMibCondition.0</key>
-                    <delay>30</delay>
-                    <history>90</history>
-                    <trends>365</trends>
-                    <status>0</status>
-                    <value_type>3</value_type>
-                    <allowed_hosts/>
-                    <units/>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port>{$SNMP_PORT}</port>
-                    <description>The overall condition (status) of the system represented by&#13;
-this MIB.</description>
-                    <inventory_link>0</inventory_link>
-                    <applications>
-                        <application>
-                            <name>CPQIDA-MIB</name>
-                        </application>
-                    </applications>
-                    <valuemap>
-                        <name>CPQIDA-MIB cpqDaCntlrCondition</name>
-                    </valuemap>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <timeout>3s</timeout>
+                    <url/>
+                    <query_fields/>
+                    <posts/>
+                    <status_codes>200</status_codes>
+                    <follow_redirects>1</follow_redirects>
+                    <post_type>0</post_type>
+                    <http_proxy/>
+                    <headers/>
+                    <retrieve_mode>0</retrieve_mode>
+                    <request_method>1</request_method>
+                    <output_format>0</output_format>
+                    <allow_traps>0</allow_traps>
+                    <ssl_cert_file/>
+                    <ssl_key_file/>
+                    <ssl_key_password/>
+                    <verify_peer>0</verify_peer>
+                    <verify_host>0</verify_host>
+                    <master_item/>
                 </item>
             </items>
             <discovery_rules>
@@ -164,7 +216,7 @@ this MIB.</description>
                     <name>Array Accelerator Board</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <snmp_oid>CPQIDA-MIB::cpqDaAccelCntlrIndex</snmp_oid>
+                    <snmp_oid>discovery[{#SNMPVALUE},CPQIDA-MIB::cpqDaAccelCntlrIndex]</snmp_oid>
                     <key>cpqDaAccelCntlrIndex</key>
                     <delay>60</delay>
                     <status>0</status>
@@ -176,7 +228,6 @@ this MIB.</description>
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
                     <authtype>0</authtype>
@@ -185,19 +236,44 @@ this MIB.</description>
                     <publickey/>
                     <privatekey/>
                     <port>{$SNMP_PORT}</port>
-                    <filter>:</filter>
-                    <lifetime>30</lifetime>
+                    <filter>
+                        <evaltype>0</evaltype>
+                        <formula/>
+                        <conditions/>
+                    </filter>
+                    <lifetime>30d</lifetime>
                     <description/>
                     <item_prototypes/>
                     <trigger_prototypes/>
                     <graph_prototypes/>
                     <host_prototypes/>
+                    <jmx_endpoint/>
+                    <timeout>3s</timeout>
+                    <url/>
+                    <query_fields/>
+                    <posts/>
+                    <status_codes>200</status_codes>
+                    <follow_redirects>1</follow_redirects>
+                    <post_type>0</post_type>
+                    <http_proxy/>
+                    <headers/>
+                    <retrieve_mode>0</retrieve_mode>
+                    <request_method>1</request_method>
+                    <allow_traps>0</allow_traps>
+                    <ssl_cert_file/>
+                    <ssl_key_file/>
+                    <ssl_key_password/>
+                    <verify_peer>0</verify_peer>
+                    <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>Array Controllers</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <snmp_oid>CPQIDA-MIB::cpqDaCntlrIndex</snmp_oid>
+                    <snmp_oid>discovery[{#SNMPVALUE},CPQIDA-MIB::cpqDaCntlrIndex]</snmp_oid>
                     <key>cpqDaCntlrIndex</key>
                     <delay>60</delay>
                     <status>0</status>
@@ -209,7 +285,6 @@ this MIB.</description>
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
                     <authtype>0</authtype>
@@ -218,25 +293,27 @@ this MIB.</description>
                     <publickey/>
                     <privatekey/>
                     <port>{$SNMP_PORT}</port>
-                    <filter>:</filter>
-                    <lifetime>30</lifetime>
+                    <filter>
+                        <evaltype>0</evaltype>
+                        <formula/>
+                        <conditions/>
+                    </filter>
+                    <lifetime>30d</lifetime>
                     <description/>
                     <item_prototypes>
                         <item_prototype>
-                            <name>Array Controller #$1 Board Condition</name>
+                            <name>Array Controller #$1 RAID ADG Enabler Module Status</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
-                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrBoardCondition.{#SNMPINDEX}</snmp_oid>
-                            <key>cpqDaCntlrBoardCondition.[{#SNMPINDEX}]</key>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrAccessModuleStatus.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrAccessModuleStatus[{#SNMPINDEX}]</key>
                             <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -244,11 +321,161 @@ this MIB.</description>
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>The following values are valid:&#13;
+other (1)&#13;
+  Indicates that the agent does not recognize the RAID ADG&#13;
+  Enabler Module status.  You may need to upgrade the agent.&#13;
+notSupported (2)&#13;
+  Indicates that the RAID ADG Enabler Module is not supported on&#13;
+  this type of controller.&#13;
+notPresent (3)&#13;
+  Indicates that the RAID ADG Enabler Module is not present or&#13;
+  is not accessible.&#13;
+badSignature (4)&#13;
+  Indicates that the RAID ADG Enabler Module is present, but has&#13;
+  an incorrect signature.&#13;
+badChecksum (5)&#13;
+  Indicates that the RAID ADG Enabler Module is present, but the&#13;
+  checksum failed.&#13;
+fullyFunctional (6)&#13;
+  Indicates that the RAID ADG Enabler Module is present and&#13;
+  fully functional.&#13;
+upgradeFirmware (7)&#13;
+  Indicates that the RAID ADG Enabler Module is present, but a&#13;
+  firmware upgrade is required to make it fully functional.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>CPQIDA-MIB cpqDaCntlrAccessModuleStatus</name>
+                            </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 Physical Drive Blink Time Count</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrBlinkTime.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrBlinkTime[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>The controller blink time variable allows the drive tray LEDs&#13;
+of all physical drives attached to this controller to blink.&#13;
+This value indicates the amount of time, in tenths of a second,&#13;
+that the physical drive LEDs will continue to blink.  A value&#13;
+of zero indicates the drive LEDs are not blinking.  If the&#13;
+value cannot be determined or no drive on this controller is in&#13;
+a hot plug tray, 4,294,967,295 is returned.&#13;
+To blink the drive LEDs on all physical drives attached to this&#13;
+controller, set this value to the time to blink in tenths of&#13;
+seconds.&#13;
+To stop the drive LEDs from blinking, set this value to 0.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Array Controller #$1 Board Condition</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrBoardCondition.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaCntlrBoardCondition.[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>30d</history>
+                            <trends>365d</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params/>
+                            <ipmi_sensor/>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -267,22 +494,43 @@ accelerators.</description>
                             <valuemap>
                                 <name>CPQIDA-MIB cpqDaCntlrCondition</name>
                             </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
                         </item_prototype>
                         <item_prototype>
                             <name>Array Controller #$1 Board Status</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>CPQIDA-MIB::cpqDaCntlrBoardStatus.{#SNMPINDEX}</snmp_oid>
                             <key>cpqDaCntlrBoardStatus.[{#SNMPINDEX}]</key>
                             <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -290,11 +538,8 @@ accelerators.</description>
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -337,22 +582,43 @@ Enumerations:&#13;
                             <valuemap>
                                 <name>CPQIDA-MIB cpqDaCntlrBoardStatus</name>
                             </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
                         </item_prototype>
                         <item_prototype>
                             <name>Array Controller #$1 Condition</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>CPQIDA-MIB::cpqDaCntlrCondition.{#SNMPINDEX}</snmp_oid>
                             <key>cpqDaCntlrCondition.[{#SNMPINDEX}]</key>
                             <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -360,11 +626,8 @@ Enumerations:&#13;
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -389,22 +652,43 @@ Enumerations:&#13;
                             <valuemap>
                                 <name>CPQIDA-MIB cpqDaCntlrCondition</name>
                             </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
                         </item_prototype>
                         <item_prototype>
                             <name>Array Controller #$1 Current Role</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>CPQIDA-MIB::cpqDaCntlrCurrentRole.{#SNMPINDEX}</snmp_oid>
                             <key>cpqDaCntlrCurrentRole[{#SNMPINDEX}]</key>
                             <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -412,11 +696,8 @@ Enumerations:&#13;
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -454,22 +735,43 @@ Enumerations:&#13;
                             <valuemap>
                                 <name>CPQIDA-MIB cpqDaCntlrCurrentRole</name>
                             </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
                         </item_prototype>
                         <item_prototype>
                             <name>Array Controller #$1 Daughter Board Type</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>CPQIDA-MIB::cpqDaCntlrDaughterBoardType.{#SNMPINDEX}</snmp_oid>
                             <key>cpqDaCntlrDaughterBoardType[{#SNMPINDEX}]</key>
                             <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -477,11 +779,8 @@ Enumerations:&#13;
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -512,22 +811,43 @@ arrayExpansionModulePresent (6)&#13;
                             <valuemap>
                                 <name>CPQIDA-MIB cpqDaCntlrDaughterBoardType</name>
                             </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
                         </item_prototype>
                         <item_prototype>
                             <name>Array Controller #$1 Drive Ownership</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>CPQIDA-MIB::cpqDaCntlrDriveOwnership.{#SNMPINDEX}</snmp_oid>
                             <key>cpqDaCntlrDriveOwnership.[{#SNMPINDEX}]</key>
                             <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -535,11 +855,8 @@ arrayExpansionModulePresent (6)&#13;
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -568,22 +885,43 @@ notOwner (3)&#13;
                             <valuemap>
                                 <name>CPQIDA-MIB cpqDaCntlrDriveOwnership</name>
                             </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
                         </item_prototype>
                         <item_prototype>
                             <name>Array Controller #$1 Drive Write Cache State</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>CPQIDA-MIB::cpqDaCntlrDriveWriteCacheState.{#SNMPINDEX}</snmp_oid>
                             <key>cpqDaCntlrDriveWriteCacheState[{#SNMPINDEX}]</key>
                             <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -591,11 +929,8 @@ notOwner (3)&#13;
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -620,22 +955,43 @@ enabled (3)&#13;
                             <valuemap>
                                 <name>CPQIDA-MIB cpqDaCntlrDriveWriteCacheState</name>
                             </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
                         </item_prototype>
                         <item_prototype>
                             <name>Array Controller #$1 Expand Priority</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>CPQIDA-MIB::cpqDaCntlrExpandPriority.{#SNMPINDEX}</snmp_oid>
                             <key>cpqDaCntlrExpandPriority[{#SNMPINDEX}]</key>
                             <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -643,11 +999,8 @@ enabled (3)&#13;
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -675,22 +1028,43 @@ high (4)&#13;
                             <valuemap>
                                 <name>CPQIDA-MIB cpqDaCntlrRebuildPriority</name>
                             </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
                         </item_prototype>
                         <item_prototype>
                             <name>Array Controller #$1 Firmware Revision</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>CPQIDA-MIB::cpqDaCntlrFWRev.{#SNMPINDEX}</snmp_oid>
                             <key>cpqDaCntlrFWRev[{#SNMPINDEX}]</key>
                             <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>90d</history>
+                            <trends>0</trends>
                             <status>0</status>
                             <value_type>4</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -698,11 +1072,8 @@ high (4)&#13;
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -721,22 +1092,43 @@ of the controller.</description>
                                 </application>
                             </applications>
                             <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
                         </item_prototype>
                         <item_prototype>
                             <name>Array Controller #$1 Hardware Location</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>CPQIDA-MIB::cpqDaCntlrHwLocation.{#SNMPINDEX}</snmp_oid>
                             <key>cpqDaCntlrHwLocation[{#SNMPINDEX}]</key>
                             <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>90d</history>
+                            <trends>0</trends>
                             <status>0</status>
                             <value_type>4</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -744,11 +1136,8 @@ of the controller.</description>
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -765,22 +1154,43 @@ be determined or is irrelevant.</description>
                                 </application>
                             </applications>
                             <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
                         </item_prototype>
                         <item_prototype>
                             <name>Array Controller #$1 Model</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>CPQIDA-MIB::cpqDaCntlrModel.{#SNMPINDEX}</snmp_oid>
                             <key>cpqDaCntlrModel[{#SNMPINDEX}]</key>
                             <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -788,11 +1198,8 @@ be determined or is irrelevant.</description>
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -931,22 +1338,43 @@ Smart Array P812 (44)&#13;
                             <valuemap>
                                 <name>CPQIDA-MIB cpqDaCntlrModel</name>
                             </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
                         </item_prototype>
                         <item_prototype>
                             <name>Array Controller #$1 Number of buses</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>CPQIDA-MIB::cpqDaCntlrNumberOfBuses.{#SNMPINDEX}</snmp_oid>
                             <key>cpqDaCntlrNumberOfBuses[{#SNMPINDEX}]</key>
                             <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -954,11 +1382,8 @@ Smart Array P812 (44)&#13;
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -973,22 +1398,43 @@ Smart Array P812 (44)&#13;
                                 </application>
                             </applications>
                             <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
                         </item_prototype>
                         <item_prototype>
                             <name>Array Controller #$1 Number of External Ports</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>CPQIDA-MIB::cpqDaCntlrNumberOfExternalPorts.{#SNMPINDEX}</snmp_oid>
                             <key>cpqDaCntlrNumberOfExternalPorts[{#SNMPINDEX}]</key>
                             <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -996,11 +1442,8 @@ Smart Array P812 (44)&#13;
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -1016,22 +1459,43 @@ controller.</description>
                                 </application>
                             </applications>
                             <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
                         </item_prototype>
                         <item_prototype>
                             <name>Array Controller #$1 Number of Internal Ports</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>CPQIDA-MIB::cpqDaCntlrNumberOfInternalPorts.{#SNMPINDEX}</snmp_oid>
                             <key>cpqDaCntlrNumberOfInternalPorts[{#SNMPINDEX}]</key>
                             <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -1039,11 +1503,8 @@ controller.</description>
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -1059,22 +1520,43 @@ controller.</description>
                                 </application>
                             </applications>
                             <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
                         </item_prototype>
                         <item_prototype>
                             <name>Array Controller #$1 Partner Board Condition</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>CPQIDA-MIB::cpqDaCntlrPartnerBoardCondition.{#SNMPINDEX}</snmp_oid>
                             <key>cpqDaCntlrPartnerBoardCondition.[{#SNMPINDEX}]</key>
                             <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -1082,11 +1564,8 @@ controller.</description>
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -1105,22 +1584,43 @@ accelerators.</description>
                             <valuemap>
                                 <name>CPQIDA-MIB cpqDaCntlrCondition</name>
                             </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
                         </item_prototype>
                         <item_prototype>
                             <name>Array Controller #$1 Partner Board Status</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>CPQIDA-MIB::cpqDaCntlrPartnerBoardStatus.{#SNMPINDEX}</snmp_oid>
                             <key>cpqDaCntlrPartnerBoardStatus.[{#SNMPINDEX}]</key>
                             <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -1128,11 +1628,8 @@ accelerators.</description>
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -1163,22 +1660,43 @@ poweredOff (5)&#13;
                             <valuemap>
                                 <name>CPQIDA-MIB cpqDaCntlrBoardStatus</name>
                             </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
                         </item_prototype>
                         <item_prototype>
                             <name>Array Controller #$1 Partner Slot</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>CPQIDA-MIB::cpqDaCntlrPartnerSlot.{#SNMPINDEX}</snmp_oid>
                             <key>cpqDaCntlrPartnerSlot[{#SNMPINDEX}]</key>
                             <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -1186,11 +1704,8 @@ poweredOff (5)&#13;
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -1207,74 +1722,43 @@ be -1.</description>
                                 </application>
                             </applications>
                             <valuemap/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>Array Controller #$1 Physical Drive Blink Time Count</name>
-                            <type>4</type>
-                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
-                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrBlinkTime.{#SNMPINDEX}</snmp_oid>
-                            <key>cpqDaCntlrBlinkTime[{#SNMPINDEX}]</key>
-                            <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
-                            <status>0</status>
-                            <value_type>3</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port>{$SNMP_PORT}</port>
-                            <description>The controller blink time variable allows the drive tray LEDs&#13;
-of all physical drives attached to this controller to blink.&#13;
-This value indicates the amount of time, in tenths of a second,&#13;
-that the physical drive LEDs will continue to blink.  A value&#13;
-of zero indicates the drive LEDs are not blinking.  If the&#13;
-value cannot be determined or no drive on this controller is in&#13;
-a hot plug tray, 4,294,967,295 is returned.&#13;
-To blink the drive LEDs on all physical drives attached to this&#13;
-controller, set this value to the time to blink in tenths of&#13;
-seconds.&#13;
-To stop the drive LEDs from blinking, set this value to 0.</description>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>CPQIDA-MIB</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
                         </item_prototype>
                         <item_prototype>
                             <name>Array Controller #$1 Product Revision</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>CPQIDA-MIB::cpqDaCntlrProductRev.{#SNMPINDEX}</snmp_oid>
                             <key>cpqDaCntlrProductRev[{#SNMPINDEX}]</key>
                             <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>90d</history>
+                            <trends>0</trends>
                             <status>0</status>
                             <value_type>4</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -1282,11 +1766,8 @@ To stop the drive LEDs from blinking, set this value to 0.</description>
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -1306,87 +1787,43 @@ a NULL string.</description>
                                 </application>
                             </applications>
                             <valuemap/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>Array Controller #$1 RAID ADG Enabler Module Status</name>
-                            <type>4</type>
-                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
-                            <snmp_oid>CPQIDA-MIB::cpqDaCntlrAccessModuleStatus.{#SNMPINDEX}</snmp_oid>
-                            <key>cpqDaCntlrAccessModuleStatus[{#SNMPINDEX}]</key>
-                            <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
-                            <status>0</status>
-                            <value_type>3</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port>{$SNMP_PORT}</port>
-                            <description>The following values are valid:&#13;
-other (1)&#13;
-  Indicates that the agent does not recognize the RAID ADG&#13;
-  Enabler Module status.  You may need to upgrade the agent.&#13;
-notSupported (2)&#13;
-  Indicates that the RAID ADG Enabler Module is not supported on&#13;
-  this type of controller.&#13;
-notPresent (3)&#13;
-  Indicates that the RAID ADG Enabler Module is not present or&#13;
-  is not accessible.&#13;
-badSignature (4)&#13;
-  Indicates that the RAID ADG Enabler Module is present, but has&#13;
-  an incorrect signature.&#13;
-badChecksum (5)&#13;
-  Indicates that the RAID ADG Enabler Module is present, but the&#13;
-  checksum failed.&#13;
-fullyFunctional (6)&#13;
-  Indicates that the RAID ADG Enabler Module is present and&#13;
-  fully functional.&#13;
-upgradeFirmware (7)&#13;
-  Indicates that the RAID ADG Enabler Module is present, but a&#13;
-  firmware upgrade is required to make it fully functional.</description>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>CPQIDA-MIB</name>
-                                </application>
-                            </applications>
-                            <valuemap>
-                                <name>CPQIDA-MIB cpqDaCntlrAccessModuleStatus</name>
-                            </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
                         </item_prototype>
                         <item_prototype>
                             <name>Array Controller #$1 Rebuild Priority</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>CPQIDA-MIB::cpqDaCntlrRebuildPriority.{#SNMPINDEX}</snmp_oid>
                             <key>cpqDaCntlrRebuildPriority[{#SNMPINDEX}]</key>
                             <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -1394,11 +1831,8 @@ upgradeFirmware (7)&#13;
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -1426,22 +1860,43 @@ high (4)&#13;
                             <valuemap>
                                 <name>CPQIDA-MIB cpqDaCntlrRebuildPriority</name>
                             </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
                         </item_prototype>
                         <item_prototype>
                             <name>Array Controller #$1 Redundancy Error</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>CPQIDA-MIB::cpqDaCntlrRedundancyError.{#SNMPINDEX}</snmp_oid>
                             <key>cpqDaCntlrRedundancyError.[{#SNMPINDEX}]</key>
                             <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -1449,11 +1904,8 @@ high (4)&#13;
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -1501,22 +1953,43 @@ expandInProgress (12)&#13;
                             <valuemap>
                                 <name>CPQIDA-MIB cpqDaCntlrRedundancyError</name>
                             </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
                         </item_prototype>
                         <item_prototype>
                             <name>Array Controller #$1 Redundancy Type</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>CPQIDA-MIB::cpqDaCntlrRedundancyType.{#SNMPINDEX}</snmp_oid>
                             <key>cpqDaCntlrRedundancyType.[{#SNMPINDEX}]</key>
                             <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -1524,11 +1997,8 @@ expandInProgress (12)&#13;
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -1562,22 +2032,43 @@ fwPrimarySecondary (5)&#13;
                             <valuemap>
                                 <name>CPQIDA-MIB cpqDaCntlrRedundancyType</name>
                             </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
                         </item_prototype>
                         <item_prototype>
                             <name>Array Controller #$1 Serial Number</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>CPQIDA-MIB::cpqDaCntlrSerialNumber.{#SNMPINDEX}</snmp_oid>
                             <key>cpqDaCntlrSerialNumber[{#SNMPINDEX}]</key>
                             <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30d</history>
+                            <trends>0</trends>
                             <status>0</status>
                             <value_type>4</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -1585,11 +2076,8 @@ fwPrimarySecondary (5)&#13;
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -1606,22 +2094,43 @@ serial number.</description>
                                 </application>
                             </applications>
                             <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
                         </item_prototype>
                         <item_prototype>
                             <name>Array Controller #$1 Slot</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>CPQIDA-MIB::cpqDaCntlrSlot.{#SNMPINDEX}</snmp_oid>
                             <key>cpqDaCntlrSlot.[{#SNMPINDEX}]</key>
                             <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -1629,11 +2138,8 @@ serial number.</description>
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -1650,22 +2156,43 @@ the array controller is located in slot three of your computer.</description>
                                 </application>
                             </applications>
                             <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
                         </item_prototype>
                         <item_prototype>
                             <name>Array Controller #$1 Standard Interface Status</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>CPQIDA-MIB::cpqDaCntlrStndIntr.{#SNMPINDEX}</snmp_oid>
                             <key>cpqDaCntlrStndIntr.[{#SNMPINDEX}]</key>
                             <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <history>30d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -1673,11 +2200,8 @@ the array controller is located in slot three of your computer.</description>
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -1714,17 +2238,174 @@ Unavailable (5)&#13;
                             <valuemap>
                                 <name>CPQIDA-MIB cpqDaCntlrStndIntr</name>
                             </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
                         </item_prototype>
                     </item_prototypes>
-                    <trigger_prototypes/>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{Template CPQIDA-MIB - alpha:cpqDaCntlrBoardCondition.[{#SNMPINDEX}].last()}&lt;&gt;2</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Array Controller #{#SNMPINDEX} Board Condition abnormal</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template CPQIDA-MIB - alpha:cpqDaCntlrBoardStatus.[{#SNMPINDEX}].last()}&lt;&gt;2</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Array Controller #{#SNMPINDEX} Board Status abnormal</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template CPQIDA-MIB - alpha:cpqDaCntlrCondition.[{#SNMPINDEX}].last()}&lt;&gt;2</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Array Controller #{#SNMPINDEX} Condition abnormal</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template CPQIDA-MIB - alpha:cpqDaCntlrPartnerBoardCondition.[{#SNMPINDEX}].last()}&lt;&gt;2</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Array Controller #{#SNMPINDEX} Partner Board Condition abnormal</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template CPQIDA-MIB - alpha:cpqDaCntlrPartnerBoardStatus.[{#SNMPINDEX}].last()}&lt;&gt;2</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Array Controller #{#SNMPINDEX} Partner Board Status abnormal</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template CPQIDA-MIB - alpha:cpqDaCntlrAccessModuleStatus[{#SNMPINDEX}].last()}&lt;&gt;6 and {Template CPQIDA-MIB - alpha:cpqDaCntlrAccessModuleStatus[{#SNMPINDEX}].last()}&lt;&gt;2</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Array Controller #{#SNMPINDEX} RAID ADG Enabler Module Status abnormal</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template CPQIDA-MIB - alpha:cpqDaCntlrRedundancyType.[{#SNMPINDEX}].last()}&lt;&gt;2 and {Template CPQIDA-MIB - alpha:cpqDaCntlrRedundancyError.[{#SNMPINDEX}].last()}&lt;&gt;2</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Array Controller #{#SNMPINDEX} Redundancy Error</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                    </trigger_prototypes>
                     <graph_prototypes/>
                     <host_prototypes/>
+                    <jmx_endpoint/>
+                    <timeout>3s</timeout>
+                    <url/>
+                    <query_fields/>
+                    <posts/>
+                    <status_codes>200</status_codes>
+                    <follow_redirects>1</follow_redirects>
+                    <post_type>0</post_type>
+                    <http_proxy/>
+                    <headers/>
+                    <retrieve_mode>0</retrieve_mode>
+                    <request_method>1</request_method>
+                    <allow_traps>0</allow_traps>
+                    <ssl_cert_file/>
+                    <ssl_key_file/>
+                    <ssl_key_password/>
+                    <verify_peer>0</verify_peer>
+                    <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>Drive Array Controller Performance Monitor</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <snmp_oid>CPQIDA-MIB::cpqDaCntlrPerfCntlrIndex</snmp_oid>
+                    <snmp_oid>discovery[{#SNMPVALUE},CPQIDA-MIB::cpqDaCntlrPerfCntlrIndex]</snmp_oid>
                     <key>cpqDaCntlrPerfCntlrIndex</key>
                     <delay>60</delay>
                     <status>0</status>
@@ -1736,7 +2417,6 @@ Unavailable (5)&#13;
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
                     <authtype>0</authtype>
@@ -1745,19 +2425,44 @@ Unavailable (5)&#13;
                     <publickey/>
                     <privatekey/>
                     <port>{$SNMP_PORT}</port>
-                    <filter>:</filter>
-                    <lifetime>30</lifetime>
+                    <filter>
+                        <evaltype>0</evaltype>
+                        <formula/>
+                        <conditions/>
+                    </filter>
+                    <lifetime>30d</lifetime>
                     <description/>
                     <item_prototypes/>
                     <trigger_prototypes/>
                     <graph_prototypes/>
                     <host_prototypes/>
+                    <jmx_endpoint/>
+                    <timeout>3s</timeout>
+                    <url/>
+                    <query_fields/>
+                    <posts/>
+                    <status_codes>200</status_codes>
+                    <follow_redirects>1</follow_redirects>
+                    <post_type>0</post_type>
+                    <http_proxy/>
+                    <headers/>
+                    <retrieve_mode>0</retrieve_mode>
+                    <request_method>1</request_method>
+                    <allow_traps>0</allow_traps>
+                    <ssl_cert_file/>
+                    <ssl_key_file/>
+                    <ssl_key_password/>
+                    <verify_peer>0</verify_peer>
+                    <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>Drive Array Logical Drive</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <snmp_oid>CPQIDA-MIB::cpqDaLogDrvCntlrIndex</snmp_oid>
+                    <snmp_oid>discovery[{#SNMPVALUE},CPQIDA-MIB::cpqDaLogDrvCntlrIndex]</snmp_oid>
                     <key>cpqDaLogDrvCntlrIndex</key>
                     <delay>60</delay>
                     <status>0</status>
@@ -1769,7 +2474,6 @@ Unavailable (5)&#13;
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
                     <authtype>0</authtype>
@@ -1778,19 +2482,44 @@ Unavailable (5)&#13;
                     <publickey/>
                     <privatekey/>
                     <port>{$SNMP_PORT}</port>
-                    <filter>:</filter>
-                    <lifetime>30</lifetime>
+                    <filter>
+                        <evaltype>0</evaltype>
+                        <formula/>
+                        <conditions/>
+                    </filter>
+                    <lifetime>30d</lifetime>
                     <description/>
                     <item_prototypes/>
                     <trigger_prototypes/>
                     <graph_prototypes/>
                     <host_prototypes/>
+                    <jmx_endpoint/>
+                    <timeout>3s</timeout>
+                    <url/>
+                    <query_fields/>
+                    <posts/>
+                    <status_codes>200</status_codes>
+                    <follow_redirects>1</follow_redirects>
+                    <post_type>0</post_type>
+                    <http_proxy/>
+                    <headers/>
+                    <retrieve_mode>0</retrieve_mode>
+                    <request_method>1</request_method>
+                    <allow_traps>0</allow_traps>
+                    <ssl_cert_file/>
+                    <ssl_key_file/>
+                    <ssl_key_password/>
+                    <verify_peer>0</verify_peer>
+                    <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>Drive Array Logical Drive Performance Monitor</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <snmp_oid>CPQIDA-MIB::cpqDaLogDrvPerfCntlrIndex</snmp_oid>
+                    <snmp_oid>discovery[{#SNMPVALUE},CPQIDA-MIB::cpqDaLogDrvPerfCntlrIndex]</snmp_oid>
                     <key>cpqDaLogDrvPerfCntlrIndex</key>
                     <delay>60</delay>
                     <status>0</status>
@@ -1802,7 +2531,6 @@ Unavailable (5)&#13;
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
                     <authtype>0</authtype>
@@ -1811,19 +2539,44 @@ Unavailable (5)&#13;
                     <publickey/>
                     <privatekey/>
                     <port>{$SNMP_PORT}</port>
-                    <filter>:</filter>
-                    <lifetime>30</lifetime>
+                    <filter>
+                        <evaltype>0</evaltype>
+                        <formula/>
+                        <conditions/>
+                    </filter>
+                    <lifetime>30d</lifetime>
                     <description/>
                     <item_prototypes/>
                     <trigger_prototypes/>
                     <graph_prototypes/>
                     <host_prototypes/>
+                    <jmx_endpoint/>
+                    <timeout>3s</timeout>
+                    <url/>
+                    <query_fields/>
+                    <posts/>
+                    <status_codes>200</status_codes>
+                    <follow_redirects>1</follow_redirects>
+                    <post_type>0</post_type>
+                    <http_proxy/>
+                    <headers/>
+                    <retrieve_mode>0</retrieve_mode>
+                    <request_method>1</request_method>
+                    <allow_traps>0</allow_traps>
+                    <ssl_cert_file/>
+                    <ssl_key_file/>
+                    <ssl_key_password/>
+                    <verify_peer>0</verify_peer>
+                    <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>Drive Array Physical Drive</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <snmp_oid>CPQIDA-MIB::cpqDaPhyDrvBay</snmp_oid>
+                    <snmp_oid>discovery[{#SNMPVALUE},CPQIDA-MIB::cpqDaPhyDrvBay]</snmp_oid>
                     <key>cpqDaPhyDrvBay</key>
                     <delay>60</delay>
                     <status>0</status>
@@ -1835,7 +2588,6 @@ Unavailable (5)&#13;
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
                     <authtype>0</authtype>
@@ -1844,25 +2596,27 @@ Unavailable (5)&#13;
                     <publickey/>
                     <privatekey/>
                     <port>{$SNMP_PORT}</port>
-                    <filter>:</filter>
-                    <lifetime>30</lifetime>
+                    <filter>
+                        <evaltype>0</evaltype>
+                        <formula/>
+                        <conditions/>
+                    </filter>
+                    <lifetime>30d</lifetime>
                     <description/>
                     <item_prototypes>
                         <item_prototype>
-                            <name>Physical Drive $1 $2 $3 {#SNMPVALUE} Status</name>
+                            <name>Physical Drive $1 $2 $3 Condition</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
-                            <snmp_oid>CPQIDA-MIB::cpqDaPhyDrvStatus.{#SNMPINDEX}</snmp_oid>
-                            <key>cpqDaPhyDrvStatus.[{#SNMPVALUE}]</key>
-                            <delay>30</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <snmp_oid>CPQIDA-MIB::cpqDaPhyDrvCondition.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaPhyDrvCondition.[{#SNMPVALUE}]</key>
+                            <delay>60</delay>
+                            <history>30d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -1870,11 +2624,271 @@ Unavailable (5)&#13;
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>The condition of the device.&#13;
+This value represents the overall condition of this physical&#13;
+drive.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>CPQIDA-MIB::cpqDaPhyDrvCondition</name>
+                            </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Physical Drive $1 $2 $3 Firmware Revision</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>CPQIDA-MIB::cpqDaPhyDrvFWRev.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaPhyDrvFWRev.[{#SNMPVALUE}]</key>
+                            <delay>60</delay>
+                            <history>30d</history>
+                            <trends>0</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>This shows the physical drive revision number.&#13;
+If the firmware revision is not present, you have not properly&#13;
+initialized the drive array.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Physical Drive $1 $2 $3 Model</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>CPQIDA-MIB::cpqDaPhyDrvModel.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaPhyDrvModel.[{#SNMPVALUE}]</key>
+                            <delay>60</delay>
+                            <history>30d</history>
+                            <trends>0</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>This is a text description of the physical drive.  The text that&#13;
+appears depends upon who manufactured the drive and the drive&#13;
+type.&#13;
+If a drive fails, note the model to identify the type of drive&#13;
+necessary for replacement.&#13;
+If a model number is not present, you may not have properly&#13;
+initialized the drive array to which the physical drive is&#13;
+attached for monitoring.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Physical Drive $1 $2 $3 S.M.A.R.T Status</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>CPQIDA-MIB::cpqDaPhyDrvSmartStatus.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaPhyDrvSmartStatus.[{#SNMPVALUE}]</key>
+                            <delay>60</delay>
+                            <history>30d</history>
+                            <trends>365d</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port>{$SNMP_PORT}</port>
+                            <description>The following values are defined:&#13;
+other(1)&#13;
+The agent is unable to determine if the status of S.M.A.R.T&#13;
+predictive failure monitoring for this drive.&#13;
+ok(2)&#13;
+Indicates the drive is functioning properly.&#13;
+replaceDrive(3)&#13;
+Indicates that the drive has a S.M.A.R.T predictive failure&#13;
+error and should be replaced.</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>CPQIDA-MIB</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>CPQIDA-MIB::cpqDaPhyDrvSmartStatus</name>
+                            </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Physical Drive $1 $2 $3 Status</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>CPQIDA-MIB::cpqDaPhyDrvStatus.{#SNMPINDEX}</snmp_oid>
+                            <key>cpqDaPhyDrvStatus.[{#SNMPVALUE}]</key>
+                            <delay>30</delay>
+                            <history>30d</history>
+                            <trends>365d</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params/>
+                            <ipmi_sensor/>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -1914,17 +2928,110 @@ Erase Queued(7)&#13;
                             <valuemap>
                                 <name>CPQIDA-MIB cpqDaPhyDrvStatus</name>
                             </valuemap>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <timeout>3s</timeout>
+                            <url/>
+                            <query_fields/>
+                            <posts/>
+                            <status_codes>200</status_codes>
+                            <follow_redirects>1</follow_redirects>
+                            <post_type>0</post_type>
+                            <http_proxy/>
+                            <headers/>
+                            <retrieve_mode>0</retrieve_mode>
+                            <request_method>1</request_method>
+                            <output_format>0</output_format>
+                            <allow_traps>0</allow_traps>
+                            <ssl_cert_file/>
+                            <ssl_key_file/>
+                            <ssl_key_password/>
+                            <verify_peer>0</verify_peer>
+                            <verify_host>0</verify_host>
+                            <application_prototypes/>
+                            <master_item/>
                         </item_prototype>
                     </item_prototypes>
-                    <trigger_prototypes/>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{Template CPQIDA-MIB - alpha:cpqDaPhyDrvCondition.[{#SNMPVALUE}].last()}&lt;&gt;2</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Physical Drive {#SNMPVALUE} Condition abnormal</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template CPQIDA-MIB - alpha:cpqDaPhyDrvSmartStatus.[{#SNMPVALUE}].last()}&lt;&gt;2</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Physical Drive {#SNMPVALUE} S.M.A.R.T. Status abnormal</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template CPQIDA-MIB - alpha:cpqDaPhyDrvStatus.[{#SNMPVALUE}].last()}&lt;&gt;2 and {Template CPQIDA-MIB - alpha:cpqDaPhyDrvStatus.[{#SNMPVALUE}].last()}&lt;&gt;9</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Physical Drive {#SNMPVALUE} Status abnormal</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                    </trigger_prototypes>
                     <graph_prototypes/>
                     <host_prototypes/>
+                    <jmx_endpoint/>
+                    <timeout>3s</timeout>
+                    <url/>
+                    <query_fields/>
+                    <posts/>
+                    <status_codes>200</status_codes>
+                    <follow_redirects>1</follow_redirects>
+                    <post_type>0</post_type>
+                    <http_proxy/>
+                    <headers/>
+                    <retrieve_mode>0</retrieve_mode>
+                    <request_method>1</request_method>
+                    <allow_traps>0</allow_traps>
+                    <ssl_cert_file/>
+                    <ssl_key_file/>
+                    <ssl_key_password/>
+                    <verify_peer>0</verify_peer>
+                    <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>Drive Array Physical Drive Threshold</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <snmp_oid>CPQIDA-MIB::cpqDaPhyDrvThrCntlrIndex</snmp_oid>
+                    <snmp_oid>discovery[{#SNMPVALUE},CPQIDA-MIB::cpqDaPhyDrvThrCntlrIndex]</snmp_oid>
                     <key>cpqDaPhyDrvThrCntlrIndex</key>
                     <delay>60</delay>
                     <status>0</status>
@@ -1936,7 +3043,6 @@ Erase Queued(7)&#13;
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
                     <authtype>0</authtype>
@@ -1945,19 +3051,44 @@ Erase Queued(7)&#13;
                     <publickey/>
                     <privatekey/>
                     <port>{$SNMP_PORT}</port>
-                    <filter>:</filter>
-                    <lifetime>30</lifetime>
+                    <filter>
+                        <evaltype>0</evaltype>
+                        <formula/>
+                        <conditions/>
+                    </filter>
+                    <lifetime>30d</lifetime>
                     <description/>
                     <item_prototypes/>
                     <trigger_prototypes/>
                     <graph_prototypes/>
                     <host_prototypes/>
+                    <jmx_endpoint/>
+                    <timeout>3s</timeout>
+                    <url/>
+                    <query_fields/>
+                    <posts/>
+                    <status_codes>200</status_codes>
+                    <follow_redirects>1</follow_redirects>
+                    <post_type>0</post_type>
+                    <http_proxy/>
+                    <headers/>
+                    <retrieve_mode>0</retrieve_mode>
+                    <request_method>1</request_method>
+                    <allow_traps>0</allow_traps>
+                    <ssl_cert_file/>
+                    <ssl_key_file/>
+                    <ssl_key_password/>
+                    <verify_peer>0</verify_peer>
+                    <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>Drive Array Spare</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <snmp_oid>CPQIDA-MIB::cpqDaSpareTable</snmp_oid>
+                    <snmp_oid>discovery[{#SNMPVALUE},CPQIDA-MIB::cpqDaSpareTable]</snmp_oid>
                     <key>cpqDaSpareTable</key>
                     <delay>60</delay>
                     <status>0</status>
@@ -1969,7 +3100,6 @@ Erase Queued(7)&#13;
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
                     <authtype>0</authtype>
@@ -1978,19 +3108,44 @@ Erase Queued(7)&#13;
                     <publickey/>
                     <privatekey/>
                     <port>{$SNMP_PORT}</port>
-                    <filter>:</filter>
-                    <lifetime>30</lifetime>
+                    <filter>
+                        <evaltype>0</evaltype>
+                        <formula/>
+                        <conditions/>
+                    </filter>
+                    <lifetime>30d</lifetime>
                     <description/>
                     <item_prototypes/>
                     <trigger_prototypes/>
                     <graph_prototypes/>
                     <host_prototypes/>
+                    <jmx_endpoint/>
+                    <timeout>3s</timeout>
+                    <url/>
+                    <query_fields/>
+                    <posts/>
+                    <status_codes>200</status_codes>
+                    <follow_redirects>1</follow_redirects>
+                    <post_type>0</post_type>
+                    <http_proxy/>
+                    <headers/>
+                    <retrieve_mode>0</retrieve_mode>
+                    <request_method>1</request_method>
+                    <allow_traps>0</allow_traps>
+                    <ssl_cert_file/>
+                    <ssl_key_file/>
+                    <ssl_key_password/>
+                    <verify_peer>0</verify_peer>
+                    <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>Drive Array Tape Counters</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <snmp_oid>CPQIDA-MIB::cpqDaTapeCountersCntlrIndex</snmp_oid>
+                    <snmp_oid>discovery[{#SNMPVALUE},CPQIDA-MIB::cpqDaTapeCountersCntlrIndex]</snmp_oid>
                     <key>cpqDaTapeCountersCntlrIndex</key>
                     <delay>60</delay>
                     <status>0</status>
@@ -2002,7 +3157,6 @@ Erase Queued(7)&#13;
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
                     <authtype>0</authtype>
@@ -2011,19 +3165,44 @@ Erase Queued(7)&#13;
                     <publickey/>
                     <privatekey/>
                     <port>{$SNMP_PORT}</port>
-                    <filter>:</filter>
-                    <lifetime>30</lifetime>
+                    <filter>
+                        <evaltype>0</evaltype>
+                        <formula/>
+                        <conditions/>
+                    </filter>
+                    <lifetime>30d</lifetime>
                     <description/>
                     <item_prototypes/>
                     <trigger_prototypes/>
                     <graph_prototypes/>
                     <host_prototypes/>
+                    <jmx_endpoint/>
+                    <timeout>3s</timeout>
+                    <url/>
+                    <query_fields/>
+                    <posts/>
+                    <status_codes>200</status_codes>
+                    <follow_redirects>1</follow_redirects>
+                    <post_type>0</post_type>
+                    <http_proxy/>
+                    <headers/>
+                    <retrieve_mode>0</retrieve_mode>
+                    <request_method>1</request_method>
+                    <allow_traps>0</allow_traps>
+                    <ssl_cert_file/>
+                    <ssl_key_file/>
+                    <ssl_key_password/>
+                    <verify_peer>0</verify_peer>
+                    <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>Drive Array Tape Drive</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <snmp_oid>CPQIDA-MIB::cpqDaTapeDrvCntlrIndex</snmp_oid>
+                    <snmp_oid>discovery[{#SNMPVALUE},CPQIDA-MIB::cpqDaTapeDrvCntlrIndex]</snmp_oid>
                     <key>cpqDaTapeDrvCntlrIndex</key>
                     <delay>60</delay>
                     <status>0</status>
@@ -2035,7 +3214,6 @@ Erase Queued(7)&#13;
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
                     <authtype>0</authtype>
@@ -2044,19 +3222,44 @@ Erase Queued(7)&#13;
                     <publickey/>
                     <privatekey/>
                     <port>{$SNMP_PORT}</port>
-                    <filter>:</filter>
-                    <lifetime>30</lifetime>
+                    <filter>
+                        <evaltype>0</evaltype>
+                        <formula/>
+                        <conditions/>
+                    </filter>
+                    <lifetime>30d</lifetime>
                     <description/>
                     <item_prototypes/>
                     <trigger_prototypes/>
                     <graph_prototypes/>
                     <host_prototypes/>
+                    <jmx_endpoint/>
+                    <timeout>3s</timeout>
+                    <url/>
+                    <query_fields/>
+                    <posts/>
+                    <status_codes>200</status_codes>
+                    <follow_redirects>1</follow_redirects>
+                    <post_type>0</post_type>
+                    <http_proxy/>
+                    <headers/>
+                    <retrieve_mode>0</retrieve_mode>
+                    <request_method>1</request_method>
+                    <allow_traps>0</allow_traps>
+                    <ssl_cert_file/>
+                    <ssl_key_file/>
+                    <ssl_key_password/>
+                    <verify_peer>0</verify_peer>
+                    <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>Drive Array Tape Library</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <snmp_oid>CPQIDA-MIB::cpqDaTapeLibraryCntlrIndex</snmp_oid>
+                    <snmp_oid>discovery[{#SNMPVALUE},CPQIDA-MIB::cpqDaTapeLibraryCntlrIndex]</snmp_oid>
                     <key>cpqDaTapeLibraryCntlrIndex</key>
                     <delay>60</delay>
                     <status>0</status>
@@ -2068,7 +3271,6 @@ Erase Queued(7)&#13;
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
                     <authtype>0</authtype>
@@ -2077,18 +3279,616 @@ Erase Queued(7)&#13;
                     <publickey/>
                     <privatekey/>
                     <port>{$SNMP_PORT}</port>
-                    <filter>:</filter>
-                    <lifetime>30</lifetime>
+                    <filter>
+                        <evaltype>0</evaltype>
+                        <formula/>
+                        <conditions/>
+                    </filter>
+                    <lifetime>30d</lifetime>
                     <description/>
                     <item_prototypes/>
                     <trigger_prototypes/>
                     <graph_prototypes/>
                     <host_prototypes/>
+                    <jmx_endpoint/>
+                    <timeout>3s</timeout>
+                    <url/>
+                    <query_fields/>
+                    <posts/>
+                    <status_codes>200</status_codes>
+                    <follow_redirects>1</follow_redirects>
+                    <post_type>0</post_type>
+                    <http_proxy/>
+                    <headers/>
+                    <retrieve_mode>0</retrieve_mode>
+                    <request_method>1</request_method>
+                    <allow_traps>0</allow_traps>
+                    <ssl_cert_file/>
+                    <ssl_key_file/>
+                    <ssl_key_password/>
+                    <verify_peer>0</verify_peer>
+                    <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
             </discovery_rules>
+            <httptests/>
             <macros/>
             <templates/>
             <screens/>
+            <tags/>
         </template>
     </templates>
+    <triggers>
+        <trigger>
+            <expression>{Template CPQIDA-MIB - alpha:cpqDaMibCondition.0.last()}&lt;&gt;2</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>CPQIDA-MIB Overall status abnormal</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{Template CPQIDA-MIB - alpha:cpqDaMibCondition.0.nodata(5m)}=1</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>CPQIDA-MIB Overall status data not available for a long time</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+    </triggers>
+    <value_maps>
+        <value_map>
+            <name>CPQIDA-MIB::cpqDaPhyDrvCondition</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>other</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>ok</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>degraded</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>failed</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>CPQIDA-MIB::cpqDaPhyDrvSmartStatus</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>other</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>ok</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>replaceDrive</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>CPQIDA-MIB cpqDaCntlrAccessModuleStatus</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>other</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>notSupported</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>notPresent</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>badSignature</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>badChecksum</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>fullyFunctional</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>upgradeFirmware</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>CPQIDA-MIB cpqDaCntlrBoardStatus</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>other</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>ok</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>generalFailure</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>cableProblem</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>poweredOff</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>CPQIDA-MIB cpqDaCntlrCondition</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>other</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>ok</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>degraded</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>failed</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>CPQIDA-MIB cpqDaCntlrCurrentRole</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>other</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>notDuplexed</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>active</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>backup</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>CPQIDA-MIB cpqDaCntlrDaughterBoardType</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>other</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>notSupported</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>notPresent</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>scsiBoardPresent</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>fibreBoardPresent</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>arrayExpansionModulePresent</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>CPQIDA-MIB cpqDaCntlrDriveOwnership</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>other</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>owner</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>notOwner</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>CPQIDA-MIB cpqDaCntlrDriveWriteCacheState</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>other</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>disabled</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>enabled</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>CPQIDA-MIB cpqDaCntlrModel</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>other</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>ida</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>ida-expansion</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>ida-2</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>smart</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>smart-2e</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>smart-2p</newvalue>
+                </mapping>
+                <mapping>
+                    <value>8</value>
+                    <newvalue>smart-2sl</newvalue>
+                </mapping>
+                <mapping>
+                    <value>9</value>
+                    <newvalue>smart-3100es</newvalue>
+                </mapping>
+                <mapping>
+                    <value>10</value>
+                    <newvalue>smart-3200</newvalue>
+                </mapping>
+                <mapping>
+                    <value>11</value>
+                    <newvalue>smart-2dh</newvalue>
+                </mapping>
+                <mapping>
+                    <value>12</value>
+                    <newvalue>smart-221</newvalue>
+                </mapping>
+                <mapping>
+                    <value>13</value>
+                    <newvalue>sa-4250es</newvalue>
+                </mapping>
+                <mapping>
+                    <value>14</value>
+                    <newvalue>sa-4200</newvalue>
+                </mapping>
+                <mapping>
+                    <value>15</value>
+                    <newvalue>sa-integrated</newvalue>
+                </mapping>
+                <mapping>
+                    <value>16</value>
+                    <newvalue>sa-431</newvalue>
+                </mapping>
+                <mapping>
+                    <value>17</value>
+                    <newvalue>sa-5300</newvalue>
+                </mapping>
+                <mapping>
+                    <value>18</value>
+                    <newvalue>raidLc2</newvalue>
+                </mapping>
+                <mapping>
+                    <value>19</value>
+                    <newvalue>sa-5i</newvalue>
+                </mapping>
+                <mapping>
+                    <value>20</value>
+                    <newvalue>sa-532</newvalue>
+                </mapping>
+                <mapping>
+                    <value>21</value>
+                    <newvalue>sa-5312</newvalue>
+                </mapping>
+                <mapping>
+                    <value>22</value>
+                    <newvalue>sa-641</newvalue>
+                </mapping>
+                <mapping>
+                    <value>23</value>
+                    <newvalue>sa-642</newvalue>
+                </mapping>
+                <mapping>
+                    <value>24</value>
+                    <newvalue>sa-6400</newvalue>
+                </mapping>
+                <mapping>
+                    <value>25</value>
+                    <newvalue>sa-6400em</newvalue>
+                </mapping>
+                <mapping>
+                    <value>26</value>
+                    <newvalue>sa-6i</newvalue>
+                </mapping>
+                <mapping>
+                    <value>27</value>
+                    <newvalue>sa-generic</newvalue>
+                </mapping>
+                <mapping>
+                    <value>29</value>
+                    <newvalue>sa-p600</newvalue>
+                </mapping>
+                <mapping>
+                    <value>30</value>
+                    <newvalue>sa-e400</newvalue>
+                </mapping>
+                <mapping>
+                    <value>31</value>
+                    <newvalue>sa-e200</newvalue>
+                </mapping>
+                <mapping>
+                    <value>32</value>
+                    <newvalue>sa-e200i</newvalue>
+                </mapping>
+                <mapping>
+                    <value>33</value>
+                    <newvalue>sa-p400i</newvalue>
+                </mapping>
+                <mapping>
+                    <value>34</value>
+                    <newvalue>sa-p800</newvalue>
+                </mapping>
+                <mapping>
+                    <value>35</value>
+                    <newvalue>sa-e500</newvalue>
+                </mapping>
+                <mapping>
+                    <value>36</value>
+                    <newvalue>sa-p700m</newvalue>
+                </mapping>
+                <mapping>
+                    <value>37</value>
+                    <newvalue>sa-p212</newvalue>
+                </mapping>
+                <mapping>
+                    <value>38</value>
+                    <newvalue>sa-p410</newvalue>
+                </mapping>
+                <mapping>
+                    <value>39</value>
+                    <newvalue>sa-p410i</newvalue>
+                </mapping>
+                <mapping>
+                    <value>40</value>
+                    <newvalue>sa-p411</newvalue>
+                </mapping>
+                <mapping>
+                    <value>41</value>
+                    <newvalue>sa-b110i</newvalue>
+                </mapping>
+                <mapping>
+                    <value>42</value>
+                    <newvalue>sa-p712m</newvalue>
+                </mapping>
+                <mapping>
+                    <value>43</value>
+                    <newvalue>sa-p711m</newvalue>
+                </mapping>
+                <mapping>
+                    <value>44</value>
+                    <newvalue>sa-p812</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>CPQIDA-MIB cpqDaCntlrRebuildPriority</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>other</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>low</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>medium</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>high</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>CPQIDA-MIB cpqDaCntlrRedundancyError</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>other</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>noFailure</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>noRedundantController</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>differentHardware</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>noLink</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>differentFirmware</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>differentCache</newvalue>
+                </mapping>
+                <mapping>
+                    <value>8</value>
+                    <newvalue>otherCacheFailure</newvalue>
+                </mapping>
+                <mapping>
+                    <value>9</value>
+                    <newvalue>noDrives</newvalue>
+                </mapping>
+                <mapping>
+                    <value>10</value>
+                    <newvalue>otherNoDrives</newvalue>
+                </mapping>
+                <mapping>
+                    <value>11</value>
+                    <newvalue>unsupportedDrives</newvalue>
+                </mapping>
+                <mapping>
+                    <value>12</value>
+                    <newvalue>expandInProgress</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>CPQIDA-MIB cpqDaCntlrRedundancyType</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>other</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>notRedundant</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>driverDuplexing</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>fwActiveStandby</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>fwPrimarySecondary</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>CPQIDA-MIB cpqDaCntlrStndIntr</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Other</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>Primary</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>Secondary</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>Disabled</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>Unavailable</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+        <value_map>
+            <name>CPQIDA-MIB cpqDaPhyDrvStatus</name>
+            <mappings>
+                <mapping>
+                    <value>1</value>
+                    <newvalue>Other</newvalue>
+                </mapping>
+                <mapping>
+                    <value>2</value>
+                    <newvalue>Ok</newvalue>
+                </mapping>
+                <mapping>
+                    <value>3</value>
+                    <newvalue>Failed</newvalue>
+                </mapping>
+                <mapping>
+                    <value>4</value>
+                    <newvalue>Predictive Failure</newvalue>
+                </mapping>
+                <mapping>
+                    <value>5</value>
+                    <newvalue>Erasing</newvalue>
+                </mapping>
+                <mapping>
+                    <value>6</value>
+                    <newvalue>Erase Done</newvalue>
+                </mapping>
+                <mapping>
+                    <value>7</value>
+                    <newvalue>Erase Queued</newvalue>
+                </mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
 </zabbix_export>
