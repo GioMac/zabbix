@@ -1,0 +1,134 @@
+zabbix_export:
+  version: '6.2'
+  date: '2022-10-02T11:45:02Z'
+  template_groups:
+    -
+      uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+  templates:
+    -
+      uuid: d86c53348bba4134888b0c39c917a3ab
+      template: 'Template LVM'
+      name: 'Template LVM'
+      groups:
+        -
+          name: Templates
+      discovery_rules:
+        -
+          uuid: 6cf7826727d5420490d6449e8e556b27
+          name: 'LVM Thin Pool Discovery'
+          key: lvm_thin_pool.discovery
+          delay: 15m
+          lifetime: 1w
+          item_prototypes:
+            -
+              uuid: e3bc0361ce084b569fb3b7fd6493a5d6
+              name: 'LVM Thin Pool $1 usage for data'
+              key: 'lvm.data[{#TPNAME},data_percent]'
+              history: 30d
+              value_type: FLOAT
+              units: '%'
+              trigger_prototypes:
+                -
+                  uuid: 7b8c1174a6ff479e8f141e8e16e7fb16
+                  expression: 'last(/Template LVM/lvm.data[{#TPNAME},data_percent])>80'
+                  recovery_mode: RECOVERY_EXPRESSION
+                  recovery_expression: 'last(/Template LVM/lvm.data[{#TPNAME},data_percent])<79'
+                  name: 'LV {#TPNAME} data usage too high'
+                  priority: HIGH
+            -
+              uuid: b077a818c99a493cbde91b25daaa9d4e
+              name: 'LVM Thin Pool $1 usage for metadata'
+              key: 'lvm.data[{#TPNAME},metadata_percent]'
+              history: 30d
+              value_type: FLOAT
+              units: '%'
+              request_method: POST
+              trigger_prototypes:
+                -
+                  uuid: b0d7cc6f58db4e9191fb892a52516e2d
+                  expression: 'last(/Template LVM/lvm.data[{#TPNAME},metadata_percent])>80'
+                  recovery_mode: RECOVERY_EXPRESSION
+                  recovery_expression: 'last(/Template LVM/lvm.data[{#TPNAME},metadata_percent])<79'
+                  name: 'LV {#TPNAME} metadata usage too high'
+                  priority: HIGH
+          request_method: POST
+        -
+          uuid: 627bf18cac6c40898bcd47dccbba4c52
+          name: 'LVM Thin Volume Discovery'
+          key: lvm_thin_volume.discovery
+          delay: 15m
+          lifetime: 1w
+          item_prototypes:
+            -
+              uuid: d649a7f32a9744418ff7446f338fe870
+              name: 'LVM Thin Volume $1 usage for data'
+              key: 'lvm.data[{#LVNAME},data_percent]'
+              value_type: FLOAT
+              units: '%'
+              request_method: POST
+              trigger_prototypes:
+                -
+                  uuid: c02bb57e152248fea4307a7189cdfafb
+                  expression: 'last(/Template LVM/lvm.data[{#LVNAME},data_percent])>80'
+                  recovery_mode: RECOVERY_EXPRESSION
+                  recovery_expression: 'last(/Template LVM/lvm.data[{#LVNAME},data_percent])<79'
+                  name: 'LV {#LVNAME} data usage too high'
+                  priority: HIGH
+            -
+              uuid: 995932979adc4904b299d5caf695bbe0
+              name: 'LVM Thin Volume $1 usage for metadata'
+              key: 'lvm.data[{#LVNAME},metadata_percent]'
+              value_type: FLOAT
+              units: '%'
+              trigger_prototypes:
+                -
+                  uuid: 9ad4c9936b334fe29973d3f7ad116504
+                  expression: 'last(/Template LVM/lvm.data[{#LVNAME},metadata_percent])>80'
+                  recovery_mode: RECOVERY_EXPRESSION
+                  recovery_expression: 'last(/Template LVM/lvm.data[{#LVNAME},metadata_percent])<79'
+                  name: 'LV {#LVNAME} metadata usage too high'
+                  priority: HIGH
+          request_method: POST
+        -
+          uuid: 3ee8a8cc3ccc48efbd364b9adff1efb2
+          name: 'LVM VDO Pool Discovery'
+          key: lvm_vdo_pool.discovery
+          delay: 15m
+          lifetime: 1w
+          item_prototypes:
+            -
+              uuid: ba0bcd4c5d2548f7b4363377b5193230
+              name: 'LVM VDO Pool $1 usage for data'
+              key: 'lvm.data[{#VPNAME},data_percent]'
+              value_type: FLOAT
+              units: '%'
+              trigger_prototypes:
+                -
+                  uuid: 817cc525d64f44d99dc49703cc35e978
+                  expression: 'last(/Template LVM/lvm.data[{#VPNAME},data_percent])>80'
+                  recovery_mode: RECOVERY_EXPRESSION
+                  recovery_expression: 'last(/Template LVM/lvm.data[{#VPNAME},data_percent])<79'
+                  name: 'LV {#VPNAME} data usage too high'
+                  priority: HIGH
+        -
+          uuid: 50ede8c1ebfb4232b7fc640d0bcb6152
+          name: 'LVM VDO Volume Discovery'
+          key: lvm_vdo_volume.discovery
+          delay: 15m
+          lifetime: 1w
+          item_prototypes:
+            -
+              uuid: 4b3b8280e5cb48568f2e15d578aae0f3
+              name: 'LVM VDO Volume $1 usage for data'
+              key: 'lvm.data[{#VVNAME},data_percent]'
+              value_type: FLOAT
+              units: '%'
+              trigger_prototypes:
+                -
+                  uuid: 61f1404f98584853940d43895c0d7a06
+                  expression: 'last(/Template LVM/lvm.data[{#VVNAME},data_percent])>80'
+                  recovery_mode: RECOVERY_EXPRESSION
+                  recovery_expression: 'last(/Template LVM/lvm.data[{#VVNAME},data_percent])<79'
+                  name: 'LV {#VVNAME} data usage too high'
+                  priority: HIGH
